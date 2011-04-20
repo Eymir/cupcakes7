@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView style="@style/header" android:id="@+id/textView1" android:layout_width="wrap_content" android:text="@string/app_name" android:layout_height="wrap_content"></TextView>
+    
+	<RelativeLayout android:layout_centerInParent="true" android:id="@+id/relativeLayout2" android:layout_width="fill_parent" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+		<Button android:text="@string/ingredients" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_marginBottom="10dip" android:layout_centerHorizontal="true" android:id="@+id/ingredientButton"></Button>
+		<Button android:layout_height="wrap_content" android:layout_marginBottom="10dip" android:text="@string/recipes" android:layout_width="wrap_content" android:id="@+id/recipeButton" android:layout_below="@+id/ingredientButton" android:layout_alignLeft="@+id/ingredientButton" android:layout_alignRight="@+id/ingredientButton"></Button>
+		<Button android:layout_height="wrap_content" android:layout_marginBottom="10dip" android:text="@string/menus" android:layout_width="wrap_content" android:id="@+id/menuButton" android:layout_below="@+id/recipeButton" android:layout_alignLeft="@+id/recipeButton" android:layout_alignRight="@+id/recipeButton"></Button>
+	</RelativeLayout>
+	<RelativeLayout android:layout_alignParentBottom="true" android:id="@+id/relativeLayout1" android:layout_width="match_parent" android:layout_gravity="bottom" android:layout_height="wrap_content">
+		<Button android:layout_height="wrap_content" android:layout_alignParentRight="true" android:text="@string/logButton" android:layout_width="wrap_content" android:id="@+id/logButton"></Button>
+	</RelativeLayout>
+
+</RelativeLayout>
