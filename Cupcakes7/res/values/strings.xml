@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ingredients">Ingredients</string>
+    <string name="app_name">Cupcakes</string>
+    <string name="logButton">Log message</string>
+    <string name="recipes">Recipes</string>
+    <string name="genShopList">Generate Shopping List</string>
+    <string name="menus">Menus</string>
+    
+</resources>
