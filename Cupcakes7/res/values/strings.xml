@@ -6,5 +6,9 @@
     <string name="recipes">Recipes</string>
     <string name="genShopList">Generate Shopping List</string>
     <string name="menus">Menus</string>
+    <string name="small_Powdered">teaspoons</string>
+    <string name="addButton">Add</string>
+    <string name="subtractButton">Use</string>
+    <string name="deleteText">Delete Ingredient</string>
     
 </resources>
