@@ -2,6 +2,7 @@ package com.cs474;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -18,23 +19,36 @@ public class RecipesActivity extends ListActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setListAdapter(new ArrayAdapter<String>(this, R.layout.ingredients, RECIPES));
+	    setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, RECIPES));
 	    final SharedPreferences appData = getSharedPreferences(PREFS_NAME, 0);
 	    ListView lv = getListView();
         lv.setTextFilterEnabled(true);
-        lv.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
-            {
-              // When clicked, grab the text and send it to the Cupboard/Pantry/Fridge
-          	  //Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
-          	  //i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
-  		      //startActivity(i);
-          	  SharedPreferences.Editor editor = appData.edit();
-          	  editor.putString("SEL_RECIPE", (String) ((TextView) view).getText());
-          	  editor.commit();
-          	  finish();
-            }
-        });
+        
+	    String caller = getIntent().getStringExtra("MY_CALLER");
+	    if(caller.equals("MainMenu"))
+	    {
+	    	 lv.setOnItemClickListener(new OnItemClickListener() {
+		            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+		            {
+		            	//When clicked, grab the text and send it to the recipe object
+			        	Intent i = new Intent(RecipesActivity.this, ARecipe.class);
+			        	i.putExtra("A_RECIPE", ((TextView) view).getText());
+			        	startActivity(i);
+		            }
+	    	 });
+	    }
+	    else
+	    {
+	        lv.setOnItemClickListener(new OnItemClickListener() {
+	            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
+	            {
+	            	SharedPreferences.Editor editor = appData.edit();
+	            	editor.putString("SEL_RECIPE", (String) ((TextView) view).getText());
+	            	editor.commit();
+	            	finish();
+	            }
+	        });
+	    }
 	}
 	static final String[] RECIPES = new String[] {
 	    "Tacos", "Hashbrowns", "Spaghetti", "Chocolate Chip Cookies", "Pepperoni Pizza"

@@ -24,7 +24,7 @@ public class IngredientsActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.ingredients);
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.ingredients, INGREDIENTS));
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, INGREDIENTS));
         final SharedPreferences appData = getSharedPreferences(PREFS_NAME, 0);
 
         ListView lv = getListView();
