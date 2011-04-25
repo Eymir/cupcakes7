@@ -10,5 +10,6 @@
     <string name="addButton">Add</string>
     <string name="subtractButton">Use</string>
     <string name="deleteText">Delete Ingredient</string>
+    <string name="a_recipe_deleteText">Delete Ingredient</string>
     
 </resources>
