@@ -37,31 +37,44 @@ public class IngredientsActivity extends ListActivity {
 	            {
 	              // When clicked, grab the text and send it to the Cupboard/Pantry/Fridge
 	          	  Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
+	          	  i.putExtra("MY_CALLER", "IngredientsActivity");
 	          	  i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
 	  		      startActivity(i);
 	            }
 	          });
 	    }
-	    else
+	    else if(caller.equals("ARecipe"))
 	    {
 	    	lv.setOnItemClickListener(new OnItemClickListener() {
 	            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 	            {
-	              // When clicked, grab the text and send it to the Cupboard/Pantry/Fridge
-	          	  //Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
-	          	  //i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
-	  		      //startActivity(i);
-	          	  SharedPreferences.Editor editor = appData.edit();
-	          	  editor.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
-	          	  editor.commit();
-	          	  finish();
+	              // When clicked, grab the text and return it to the calling context
+
+	          	  //SharedPreferences.Editor editor = appData.edit();
+	          	  //editor.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
+	          	  //editor.commit();
+	          	  //finish();
+	            	
+	            	Bundle bundle = new Bundle();
+	            	bundle.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
+	            	Intent mIntent = new Intent();
+	            	mIntent.putExtras(bundle);
+	            	setResult(RESULT_OK, mIntent);
+	            	//Toast.makeText(getApplicationContext(),(String) ((TextView) view).getText(),Toast.LENGTH_LONG).show();
+	            	finish();
 	            }
 	          });
 	    }
-        
+	    else
+	    {
+	    	
+	    }
         
     }
+    // INGREDIENTS is just a placeholder for the String[] that should be returned in
+    // a C++ NDK function call (depending on context); the "Create new..." option will
+	// be added after the fact by this page
     static final String[] INGREDIENTS = new String[] {
-	    "Parsley", "Potatos", "Pasta", "Pita", "Pepperoni", "Purple stuff"
+	    "Parsley", "Potatos", "Pasta", "Pita", "Pepperoni", "Create new..."
 	  };
 }
