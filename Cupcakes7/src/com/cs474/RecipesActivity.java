@@ -50,7 +50,10 @@ public class RecipesActivity extends ListActivity {
 	        });
 	    }
 	}
+	// RECIPES is just a placeholder for the String[] that should be returned in
+    // a C++ NDK function call (depending on context); the "Create new..." option will
+	// be added after the fact by this page
 	static final String[] RECIPES = new String[] {
-	    "Tacos", "Hashbrowns", "Spaghetti", "Chocolate Chip Cookies", "Pepperoni Pizza"
+	    "Tacos", "Hashbrowns", "Spaghetti", "Chocolate Chip Cookies", "Create new..."
 	  };
 }

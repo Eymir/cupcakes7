@@ -19,6 +19,21 @@ public class AnIngredientAct extends Activity {
 		final Button deleteButton = (Button) findViewById(R.id.deleteButton);
 		((TextView) findViewById(R.id.ingredientName)).setText(anIngredient);
 		deleteButton.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+		//Get context of call to this page - we are either working with Recipe's ingredients
+		//or Pantry's ingredients, and must access the underlying data specific to the call
+		String caller = getIntent().getStringExtra("MY_CALLER");
+	    if(caller.equals("ARecipe"))
+	    {
+	    
+	    }
+	    else if(caller.equals("IngredientsActivity"))
+	    {
+	    	
+	    }
+	    else
+	    {
+	    	
+	    }
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				finish();
