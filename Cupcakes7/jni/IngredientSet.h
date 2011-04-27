@@ -10,9 +10,10 @@
 #ifndef INGREDIENTSET_H_
 #define INGREDIENTSET_H_
 
+#include <jni.h>
 #include <vector>
 #include "Ingredient.h"
-#include <string>
+#include <string.h>
 using namespace std;
 
 class IngredientSet{
