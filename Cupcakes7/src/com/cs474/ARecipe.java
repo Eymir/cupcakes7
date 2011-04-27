@@ -1,6 +1,7 @@
 package com.cs474;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -20,6 +21,7 @@ public class ARecipe extends Activity {
     private static final int GET_INGREDIENT = 1;
     //private ArrayAdapter<String> adp;
     private ListView ingredientList;
+    private int selectedListPosition = -1;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -34,12 +36,32 @@ public class ARecipe extends Activity {
 		ingredientList =(ListView)findViewById(R.id.a_recipe_ingredient_list);
 		// By using setAdpater method in listview we an add string array in list.
 		//adp = new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS);
-		ingredientList.setAdapter(new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS));
+		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
+				R.layout.simple_list_item, MYINGREDIENTS));
 		deleteButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) 
 			{
-				finish();
+				if(selectedListPosition < 0)
+				{
+					Toast.makeText(getApplicationContext(),"No ingredient selected!", Toast.LENGTH_LONG).show();
+				}
+				else
+				{
+					String str = MYINGREDIENTS[selectedListPosition];
+					MYINGREDIENTS[selectedListPosition] = MYINGREDIENTS[MYINGREDIENTS.length - 1];
+	                String[] temp = new String[MYINGREDIENTS.length - 1];
+	                for(int i = 0; i< MYINGREDIENTS.length - 1; i++)
+	                {
+	                	temp[i] = MYINGREDIENTS[i];
+	                }
+	                MYINGREDIENTS = temp;
+	                Toast.makeText(getApplicationContext(),"Deleted " + str, Toast.LENGTH_LONG).show();
+	        		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(),
+	        				R.layout.simple_list_item, MYINGREDIENTS));
+
+				}
+				//finish();
 			}
 	    });
 		ingredientList.setOnItemClickListener(new OnItemClickListener() 
@@ -48,6 +70,7 @@ public class ARecipe extends Activity {
 			{
 				currentIngredient = ((TextView) view).getText().toString();
 				((TextView) view).setPressed(true);
+				selectedListPosition = position;
 				//setBackgroundColor(0xFFE4AB0F);
 				
 			}
@@ -84,22 +107,24 @@ public class ARecipe extends Activity {
         if (resultCode == RESULT_OK) {
             if (requestCode == GET_INGREDIENT) {
                 Bundle b = data.getExtras();
-                String str = "";
+                //String str = "";
                 String[] temp = new String[MYINGREDIENTS.length + 1];
                 for(int i = 0; i< MYINGREDIENTS.length; i++)
                 {
-                	str += temp[i] = MYINGREDIENTS[i];
-                	str+= " ";
+                	/*str += */temp[i] = MYINGREDIENTS[i];
+                	//str+= " ";
                 }
-                str += temp[MYINGREDIENTS.length] = b.getString("SEL_INGREDIENT");
+                /*str += */temp[MYINGREDIENTS.length] = b.getString("SEL_INGREDIENT");
                 MYINGREDIENTS = temp;
-            	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+            	//Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+        		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(),
+        				R.layout.simple_list_item, MYINGREDIENTS));
 
             	//ingredientList.get
             }
         }
 	}
-	static String[] MYINGREDIENTS = new String[] {
+	private static String[] MYINGREDIENTS = new String[] {
 	    "Flour", "Sugar", "Water"
 	  };
 
