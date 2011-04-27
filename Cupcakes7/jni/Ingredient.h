@@ -8,8 +8,9 @@
 #ifndef INGREDIENT_H
 #define	INGREDIENT_H
 
+#include <jni.h>
 #include <iostream>
-#include <string>
+#include <string.h>
 using namespace std;
 
 class Ingredient {

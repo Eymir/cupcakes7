@@ -8,6 +8,11 @@ LOCAL_PATH := $(MY_PATH)
 
 LOCAL_LDLIBS := -llog -ldl
 LOCAL_MODULE    := rmsdk
-LOCAL_SRC_FILES := native.c
+LOCAL_SRC_FILES := \
+	native.c \
+	Ingredient.cpp \
+	IngredientSet.cpp \
+	Menu.cpp \
+	Recipe.cpp
 
 include $(BUILD_SHARED_LIBRARY)

@@ -5,7 +5,7 @@
  *      Author: Andrew Shoukry
  */
 #include <iostream>
-#include <string>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "IngredientSet.h"

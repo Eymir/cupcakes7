@@ -4,8 +4,9 @@
  * 
  * Created on April 27, 2011, 3:26 AM
  */
+#include <jni.h>
 #include <iostream>
-#include <string>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "Ingredient.h"
@@ -94,9 +95,12 @@ Ingredient::~Ingredient() {
 		}
 		string Ingredient::print(){
 			string temp_;
+
 			char temp__[30];
-			itoa(amount_,temp__, 10);
-			temp_ = ("Name: "+ name_+ " " + temp__+ " " + smallName_ + " Type: " + type_ );
+			sprintf(temp__, "Name: %s %d %s Type: %s", name_.c_str(), amount_, smallName_.c_str(), type_.c_str());
+			//itoa(amount_,temp__, 10);
+			//temp_ = ("Name: "+ name_+ " " + temp__+ " " + smallName_ + " Type: " + type_ );
+			temp_ = temp__;
 			return temp_;
 
 		}
