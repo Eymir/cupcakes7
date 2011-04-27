@@ -2,6 +2,7 @@ package com.cs474;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +16,10 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class ARecipe extends Activity {
-    String currentIngredient = "";
+    String currentIngredient = null;
     private static final int GET_INGREDIENT = 1;
-    private ArrayAdapter<String> adp;
+    //private ArrayAdapter<String> adp;
+    private ListView ingredientList;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -29,11 +31,11 @@ public class ARecipe extends Activity {
 		final Button editButton = (Button) findViewById(R.id.a_recipe_edit_button);
 		final Button deleteButton = (Button) findViewById(R.id.a_recipe_deleteButton);
 		((TextView) findViewById(R.id.a_recipe_Name)).setText(aRecipe);
-		ListView ingredientList =(ListView)findViewById(R.id.a_recipe_ingredient_list);
+		ingredientList =(ListView)findViewById(R.id.a_recipe_ingredient_list);
 		// By using setAdpater method in listview we an add string array in list.
-		adp = new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS);
-		ingredientList.setAdapter(adp);
-		deleteButton.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+		//adp = new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS);
+		ingredientList.setAdapter(new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS));
+		deleteButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) 
 			{
@@ -45,14 +47,25 @@ public class ARecipe extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 			{
 				currentIngredient = ((TextView) view).getText().toString();
+				((TextView) view).setPressed(true);
+				//setBackgroundColor(0xFFE4AB0F);
+				
 			}
 		});
 		editButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Intent i = new Intent(ARecipe.this, AnIngredientAct.class);
-	        	i.putExtra("MY_CALLER", "ARecipe");
-	        	i.putExtra("AN_INGREDIENT", currentIngredient);
-		        startActivity(i);
+				if(currentIngredient == null)
+				{
+					Toast.makeText(getApplicationContext(),"No ingredient selected!",
+							Toast.LENGTH_LONG).show();
+				}
+				else
+				{
+					Intent i = new Intent(ARecipe.this, AnIngredientAct.class);
+		        	i.putExtra("MY_CALLER", "ARecipe");
+		        	i.putExtra("AN_INGREDIENT", currentIngredient);
+			        startActivity(i);
+				}
 			}	    	
 	    });
 		newButton.setOnClickListener(new OnClickListener() {
@@ -82,7 +95,7 @@ public class ARecipe extends Activity {
                 MYINGREDIENTS = temp;
             	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
 
-                adp.notifyDataSetChanged();
+            	//ingredientList.get
             }
         }
 	}
