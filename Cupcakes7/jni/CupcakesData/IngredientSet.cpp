@@ -32,6 +32,15 @@ string IngredientSet::print() {
 	return temp_;
 
 }
+void IngredientSet::deleteIngredient( Ingredient &ingrd){
+    string temp_=ingrd.getName();
+    for (int i = 0; i < ingredientSet_.size(); i++) {
+        if(temp_.compare(ingredientSet_[i].getName())){
+        ingredientSet_.erase(ingredientSet_.begin()+i);
+        return;
+        }
+	}
+}
 
 string IngredientSet::getName_() {
 	return name_;
