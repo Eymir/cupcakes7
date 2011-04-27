@@ -19,6 +19,8 @@ import android.widget.Toast;
 public class IngredientsActivity extends ListActivity {
     /** Called when the activity is first created. */
     public static final String PREFS_NAME = "MyPrefsFile";
+    public static final int CREATE_NEW = 1;
+    public static final int CREATE_NEW_RETURN = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,10 +38,21 @@ public class IngredientsActivity extends ListActivity {
 	            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 	            {
 	              // When clicked, grab the text and send it to the Cupboard/Pantry/Fridge
-	          	  Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
-	          	  i.putExtra("MY_CALLER", "IngredientsActivity");
-	          	  i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
-	  		      startActivity(i);
+	            	String str = (String) ((TextView) view).getText();
+	            	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+
+	            	if(str.equals("Create new..."))
+	            	{
+	  	          	  Intent i = new Intent(IngredientsActivity.this, NewIngredient.class);
+	  	          	  startActivityForResult(i, CREATE_NEW);
+	            	}
+	            	else
+	            	{
+	            		Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
+	          	  		i.putExtra("MY_CALLER", "IngredientsActivity");
+	          	  		i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
+	          	  		startActivity(i);
+	            	}
 	            }
 	          });
 	    }
@@ -49,19 +62,28 @@ public class IngredientsActivity extends ListActivity {
 	            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 	            {
 	              // When clicked, grab the text and return it to the calling context
+	            	String str = (String) ((TextView) view).getText();
+	            	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
 
 	          	  //SharedPreferences.Editor editor = appData.edit();
 	          	  //editor.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
 	          	  //editor.commit();
 	          	  //finish();
-	            	
-	            	Bundle bundle = new Bundle();
-	            	bundle.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
-	            	Intent mIntent = new Intent();
-	            	mIntent.putExtras(bundle);
-	            	setResult(RESULT_OK, mIntent);
-	            	//Toast.makeText(getApplicationContext(),(String) ((TextView) view).getText(),Toast.LENGTH_LONG).show();
-	            	finish();
+	            	if(str.equals("Create new..."))
+	            	{
+	  	          	  Intent i = new Intent(IngredientsActivity.this, NewIngredient.class);
+	  	          	  startActivityForResult(i, CREATE_NEW_RETURN);
+	            	}
+	            	else
+	            	{
+		            	Bundle bundle = new Bundle();
+		            	bundle.putString("SEL_INGREDIENT", str);
+		            	Intent mIntent = new Intent();
+		            	mIntent.putExtras(bundle);
+		            	setResult(RESULT_OK, mIntent);
+		            	//Toast.makeText(getApplicationContext(),(String) ((TextView) view).getText(),Toast.LENGTH_LONG).show();
+		            	finish();
+	            	}
 	            }
 	          });
 	    }

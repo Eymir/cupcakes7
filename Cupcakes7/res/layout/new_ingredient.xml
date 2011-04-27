@@ -2,5 +2,30 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent" android:orientation="vertical">
+  <TableLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content" android:gravity="center" android:layout_marginTop="20dip">
+    <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_marginBottom="15dip" android:layout_height="wrap_content">
+        <TextView android:id="@+id/textView1" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Name"></TextView>
+        <EditText android:id="@+id/editText1" android:layout_weight="1" android:layout_height="wrap_content" android:text="" android:layout_width="wrap_content"></EditText>
+        <TextView android:text="" android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    </TableRow>
+    <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_marginBottom="15dip" android:layout_height="wrap_content">
+        <TextView android:id="@+id/textView2" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Amount"></TextView>
+        <EditText android:id="@+id/editText2" android:layout_weight="1" android:layout_height="wrap_content" android:text="" android:inputType="number" android:layout_width="wrap_content" android:layout_gravity="fill_vertical"></EditText>
+        <ToggleButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="fill_vertical" android:id="@+id/new_ingredient_sizeMeasure"></ToggleButton>
+    </TableRow>
+    <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:text="Type" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginTop="5dip"></TextView>
+        <RadioGroup android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/new_ingredient_type" android:layout_width="wrap_content" android:layout_weight="1">
+            <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Powdered" android:id="@+id/radio0" android:checked="true"></RadioButton>
+            <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Liquid" android:id="@+id/radio1"></RadioButton>
+            <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Whole" android:id="@+id/radio2"></RadioButton>
+        </RadioGroup>
+    </TableRow>
+  </TableLayout>
+  <RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+      <Button android:layout_height="wrap_content" android:text="Create" android:layout_alignParentRight="true" android:layout_width="wrap_content" android:id="@+id/new_ingredient_create"></Button>
+  </RelativeLayout>
 </LinearLayout>
