@@ -26,7 +26,7 @@ public:
 	vector<Ingredient>& getIngredientSet();
 	string getName_();
 	void setName(string name_e);
-
+        void deleteIngredient( Ingredient &ingrd);
         virtual string print();
 };
 

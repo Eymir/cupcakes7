@@ -46,7 +46,7 @@ int main() {
 	ultraCool2->getIngredientSet().push_back(*cool3);
 	ultraCool2->getIngredientSet().push_back(*cool4);
         
-        
+        ultraCool2->deleteIngredient(*cool4);
         myMenu->getRecipes().push_back(*ultraCool);
         myMenu->getRecipes().push_back(*ultraCool2);
 	cout << myMenu->print()<< endl; // prints 
