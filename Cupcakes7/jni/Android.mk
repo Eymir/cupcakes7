@@ -13,6 +13,7 @@ LOCAL_SRC_FILES := \
 	Ingredient.cpp \
 	IngredientSet.cpp \
 	Menu.cpp \
-	Recipe.cpp
+	Recipe.cpp \
+	CupcakesData.cpp
 
 include $(BUILD_SHARED_LIBRARY)
