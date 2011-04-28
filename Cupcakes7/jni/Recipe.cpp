@@ -26,15 +26,15 @@ string Recipe::getType(){
 string Recipe::getDirections(){
 	return directions_;
 }
-string Recipe::print(){
+const char* Recipe::print(){
 	string temp_="";
 	temp_ = temp_ + "Type: " + type_ + "Name: " + name_ + " Directions: " + directions_ + "\n";
-	for (int i = 0; i < ingredientSet_.size(); i++) {
-		temp_ = temp_ + ingredientSet_[i].print() + "\n";
+	for (int i = 0; i < ingredientSet_->size(); i++) {
+		temp_ = temp_ + (*ingredientSet_)[i]->print() + "\n";
 
 	}
         
-	return temp_;
+	return temp_.c_str();
 }
 void Recipe::setType(string type_e){
 	type_ = type_e;

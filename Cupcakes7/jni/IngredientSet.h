@@ -18,18 +18,21 @@ using namespace std;
 
 class IngredientSet{
 protected:
-	vector<Ingredient> ingredientSet_;
+	vector<Ingredient*> * ingredientSet_;
 	string name_;
 public:
 	IngredientSet();
 	IngredientSet(string name_e);
-        virtual ~IngredientSet();
-	vector<Ingredient>& getIngredientSet();
-	string getName_();
+    virtual ~IngredientSet();
+	//vector<Ingredient>& getIngredientSet();
+    void addIngredient(string name_e, string bigName_e, string smallName_e, string type_e, int amount_e, int conversionFactor_e);
+	const char *getName_();
 	void setName(string name_e);
-        void deleteIngredient( Ingredient &ingrd);
-        virtual string print();
-};
+    void deleteIngredient( Ingredient &ingrd);
+    virtual const char *print();
+    static IngredientSet *pantry;
 
+    static IngredientSet* getPantry();
+};
 
 #endif /* INGREDIENTSET_H_ */

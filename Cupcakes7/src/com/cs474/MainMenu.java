@@ -52,12 +52,14 @@ public class MainMenu extends Activity {
         
         logButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                helloLog("This is MainMenu speaking.");
+                //helloLog("This is MainMenu speaking.");
+                initialize("something");
             }
         });
 
     }
     private native void helloLog(String logThis);
+    private native void initialize(String logThis);
     static {
         System.loadLibrary("rmsdk");
     }

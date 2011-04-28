@@ -96,12 +96,9 @@ Ingredient::~Ingredient() {
 		string Ingredient::print(){
 			string temp_;
 
-			char temp__[30];
-			sprintf(temp__, "Name: %s %d %s Type: %s", name_.c_str(), amount_, smallName_.c_str(), type_.c_str());
-			//itoa(amount_,temp__, 10);
-			//temp_ = ("Name: "+ name_+ " " + temp__+ " " + smallName_ + " Type: " + type_ );
-			temp_ = temp__;
-			return temp_;
+
+				temp_ = ("Name: "+ name_+ " " +  " " + smallName_ + " Type: " + type_ );
+ 				return temp_;
 
 		}
                 

@@ -21,7 +21,7 @@ public:
 	Recipe(string name_e, string type_e, string directions_e);
 	string getType();
 	string getDirections();
-	string print();
+	const char *print();
 	void setType(string type_e);
 	void setDirections(string directions_e);
          virtual ~Recipe();
