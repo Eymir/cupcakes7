@@ -306,3 +306,87 @@ Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile thumb  : rmsdk <= native.c
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_AnIngredientAct_getType(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:54: error: cannot convert 'std::string' to '_jstring*' in return
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:110: error: no 'const char* Ingredient::getTypeUTF()' member function declared in class 'Ingredient'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:12:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:30: error: extra qualification 'Ingredient::' on member 'getTypeUTF'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'const char* Ingredient::getTypeUTF()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:113: error: 'moreTemp' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:12:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:30: error: extra qualification 'Ingredient::' on member 'getTypeUTF'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'const char* Ingredient::getTypeUTF()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:113: error: 'IngredientSet' has not been declared
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:114: error: 'IngredientSet' has not been declared
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'const char* Ingredient::getTypeUTF()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:113: error: 'IngredientSet' has not been declared
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:114: error: 'IngredientSet' has not been declared
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'const char* Ingredient::getTypeUTF()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:115: error: 'IngredientSet' has not been declared
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:116: error: 'IngredientSet' has not been declared
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'const char* IngredientSet::listIngredients()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:55: error: 'moreTemp' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:68: error: 'moreTemp' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:16: error: 'jbool' has not been declared
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so

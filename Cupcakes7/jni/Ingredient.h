@@ -27,6 +27,7 @@ public:
 	void editSmallAmount(int smallValue_e);
 	void editBigAmount(int bigValue_e);
 	void changeAmount(int amount_e);
+	const char* getTypeUTF();
 	void editName( string name_e);
 	void editCoversionFactor(int conversionFactor_e);
 	void editBigName(string bigName_e);
@@ -39,6 +40,7 @@ public:
 	string print();
 	int getAmount();
 	int getConversionFactor();
+	static char buffer[10000];
 private:
 
 };

@@ -32,13 +32,13 @@ public class NewIngredient extends Activity {
             	
                 addIngredient(ingrName.getText().toString(), 
                 		((RadioButton)findViewById(ingrType.getCheckedRadioButtonId())).getText().toString(), 
-                		Integer.parseInt(ingrAmt.getText().toString()));
+                		Integer.parseInt(ingrAmt.getText().toString()), !sizeMeasure.isChecked());
                 setResult(RESULT_OK, new Intent());
                 finish();
             }
         });
 	}
-    private native void addIngredient(String name, String type, int amount);
+    private native void addIngredient(String name, String type, int amount, boolean isSmall);
     static {
         System.loadLibrary("rmsdk");
     }
