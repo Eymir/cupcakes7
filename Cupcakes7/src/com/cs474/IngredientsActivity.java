@@ -36,7 +36,7 @@ public class IngredientsActivity extends ListActivity {
 
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);
-	    String caller = getIntent().getStringExtra("MY_CALLER");
+	    final String caller = getIntent().getStringExtra("MY_CALLER");
 	    if(caller.equals("MainMenu"))
 	    {
 	    	lv.setOnItemClickListener(new OnItemClickListener() {
@@ -49,6 +49,7 @@ public class IngredientsActivity extends ListActivity {
 	            	if(str.equals("Create new..."))
 	            	{
 	  	          	  Intent i = new Intent(IngredientsActivity.this, NewIngredient.class);
+	  	          	  i.putExtra("MY_CALLER", caller);
 	  	          	  startActivityForResult(i, CREATE_NEW);
 	            	}
 	            	else if (!((TextView) view).getText().toString().equals(""))
@@ -77,6 +78,7 @@ public class IngredientsActivity extends ListActivity {
 	            	if(str.equals("Create new..."))
 	            	{
 	  	          	  Intent i = new Intent(IngredientsActivity.this, NewIngredient.class);
+	  	          	  i.putExtra("MY_CALLER", "UM...");
 	  	          	  startActivityForResult(i, CREATE_NEW_RETURN);
 	            	}
 	            	else

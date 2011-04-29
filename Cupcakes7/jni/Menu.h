@@ -22,6 +22,7 @@ public:
     const char* print();
     static Menu *recipes;
     static Menu* getRecipes();
+    Recipe* getRecipe(const char* name);
     const char* listRecipes();
     void addRecipe(const char* name_e, const char* type_e);
 

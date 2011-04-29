@@ -22,6 +22,7 @@ public class NewIngredient extends Activity {
 	    final EditText ingrName = (EditText) findViewById(R.id.new_ingredient_name);
 	    final EditText ingrAmt = (EditText) findViewById(R.id.new_ingredient_amount);
 	    final RadioGroup ingrType = (RadioGroup) findViewById(R.id.new_ingredient_type);
+	    final String caller = getIntent().getStringExtra("MY_CALLER");
 	    sizeMeasure.setText("SM");
 	    sizeMeasure.setTextOff("SM");
 	    sizeMeasure.setTextOn("LG");
@@ -29,16 +30,27 @@ public class NewIngredient extends Activity {
 	    createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //helloLog("This is MainMenu speaking.");
-            	
-                addIngredient(ingrName.getText().toString(), 
+            	if(caller.equals("ARecipe"))
+            	{
+            		String myRecipe = getIntent().getStringExtra("RECIPE_NAME");
+            		addToRecipe(myRecipe, ingrName.getText().toString(), 
+                    		((RadioButton)findViewById(ingrType.getCheckedRadioButtonId())).getText().toString(), 
+                    		Integer.parseInt(ingrAmt.getText().toString()), !sizeMeasure.isChecked());
+            	}
+            	else
+            	{
+            		addIngredient(ingrName.getText().toString(), 
                 		((RadioButton)findViewById(ingrType.getCheckedRadioButtonId())).getText().toString(), 
                 		Integer.parseInt(ingrAmt.getText().toString()), !sizeMeasure.isChecked());
+            	}
                 setResult(RESULT_OK, new Intent());
                 finish();
             }
         });
 	}
     private native void addIngredient(String name, String type, int amount, boolean isSmall);
+    private native void addToRecipe(String recipeName, String ingredientName, String type, int amount, boolean isSmall);
+
     static {
         System.loadLibrary("rmsdk");
     }

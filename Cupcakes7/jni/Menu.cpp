@@ -31,7 +31,7 @@ const char* Menu::print() {
 	string temp_ = "";
 
 	for (int i = 0; i < recipes_->size(); i++) {
-	temp_ = temp_ + (*recipes_)[i]->print() + "\n";
+	temp_ = temp_ + (*recipes_)[i]->getName_() + "\n";
 	//temp_ = temp_ + "blah";
 	}
 
@@ -43,11 +43,11 @@ const char* Menu::print() {
 
  Menu* Menu::getRecipes()
  {
- 	if(recipes == NULL)
+ 	if(Menu::recipes == NULL)
  	{
- 		recipes = new Menu("Recipes");
+ 		Menu::recipes = new Menu("Recipes");
  	}
- 	return recipes;
+ 	return Menu::recipes;
  }
 
  const char* Menu::listRecipes()
@@ -67,4 +67,19 @@ const char* Menu::print() {
  void Menu::addRecipe(const char* name_e, const char* type_e)
  {
  	recipes_->push_back(new Recipe(name_e, type_e));
+ }
+
+ Recipe* Menu::getRecipe(const char* name)
+ {
+
+
+ 	string temp = name;
+ 	for (int i = 0; i < recipes_->size(); i++)
+ 	{
+ 		if ((*recipes_)[i]->getName().compare(name) == 0)
+ 		{
+ 			return (*recipes_)[i];
+ 		}
+ 	}
+ 	return NULL;//(*ingredientSet_)[0];
  }
