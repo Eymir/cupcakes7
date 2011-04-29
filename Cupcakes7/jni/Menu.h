@@ -11,13 +11,19 @@
 #include "Recipe.h"
 class Menu {
 protected:
-    vector<Recipe> recipes_;
+    vector<Recipe*> *recipes_;
+    string name_;
 public:
     Menu();
+    Menu(string name);
     Menu(const Menu& orig);
     virtual ~Menu();
-    vector<Recipe>& getRecipes();
-    string print();
+    //vector<Recipe>& getRecipes();
+    const char* print();
+    static Menu *recipes;
+    static Menu* getRecipes();
+    const char* listRecipes();
+    void addRecipe(const char* name_e, const char* type_e);
 
 };
 

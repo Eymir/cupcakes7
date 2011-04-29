@@ -439,3 +439,176 @@ make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile thumb  : rmsdk <= native.c
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_useAmount(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:93: error: declaration of C function 'void Java_com_cs474_AnIngredientAct_useAmount(JNIEnv*, _jobject*, _jstring*)' conflicts with
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:78: error: previous declaration 'void Java_com_cs474_AnIngredientAct_useAmount(JNIEnv*, _jobject*, _jstring*, jint, jboolean)' here
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:10: error: 'Menu* Menu::recipes_' is not a static member of 'class Menu'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:27: error: request for member 'print' in '((Menu*)this)->Menu::recipes_.std::vector<_Tp, _Alloc>::operator[] [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>](((unsigned int)i))', which is of non-class type 'Recipe*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h: In static member function 'static Menu* Menu::getRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:14: error: invalid use of member 'Menu::recipes_' in static member function
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:37: error: from this location
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:14: error: invalid use of member 'Menu::recipes_' in static member function
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:39: error: from this location
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:39: error: no matching function for call to 'Menu::Menu(const char [7])'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:15: note: candidates are: Menu::Menu(const Menu&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:12: note:                 Menu::Menu()
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:14: error: invalid use of member 'Menu::recipes_' in static member function
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:41: error: from this location
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:27: error: request for member 'print' in '((Menu*)this)->Menu::recipes_.std::vector<_Tp, _Alloc>::operator[] [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>](((unsigned int)i))', which is of non-class type 'Recipe*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In static member function 'static Menu* Menu::getRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:39: error: no matching function for call to 'Menu::Menu(const char [7])'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:15: note: candidates are: Menu::Menu(const Menu&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:12: note:                 Menu::Menu()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In constructor 'Menu::Menu()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:13: error: no match for 'operator=' in '((Menu*)this)->Menu::recipes_ = (((const std::allocator<Menu*>&)((const std::allocator<Menu*>*)(& std::allocator<Menu*>()))), (operator new(12u), (((std::vector<Menu*, std::allocator<Menu*> >*)<anonymous>)->std::vector<_Tp, _Alloc>::vector [with _Tp = Menu*, _Alloc = std::allocator<Menu*>](<anonymous>), ((std::vector<Menu*, std::allocator<Menu*> >*)<anonymous>))))'
+/usr/local/android/ndk/sources/cxx-stl/stlport/stlport/stl/_vector.c:182: note: candidates are: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>]
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:28: error: request for member 'print' in '((Menu*)this)->Menu::recipes_.std::vector<_Tp, _Alloc>::operator[] [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>](((unsigned int)i))', which is of non-class type 'Recipe*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In constructor 'Menu::Menu()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:13: error: no match for 'operator=' in '((Menu*)this)->Menu::recipes_ = (((const std::allocator<Menu*>&)((const std::allocator<Menu*>*)(& std::allocator<Menu*>()))), (operator new(12u), (((std::vector<Menu*, std::allocator<Menu*> >*)<anonymous>)->std::vector<_Tp, _Alloc>::vector [with _Tp = Menu*, _Alloc = std::allocator<Menu*>](<anonymous>), ((std::vector<Menu*, std::allocator<Menu*> >*)<anonymous>))))'
+/usr/local/android/ndk/sources/cxx-stl/stlport/stlport/stl/_vector.c:182: note: candidates are: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>]
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: At global scope:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:17: error: expected ')' before 'name'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:34: error: request for member 'print' in '((Menu*)this)->Menu::recipes_.std::vector<_Tp, _Alloc>::operator[] [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>](((unsigned int)i))', which is of non-class type 'Recipe*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In constructor 'Menu::Menu()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:13: error: cannot convert 'std::vector<Menu*, std::allocator<Menu*> >*' to 'std::vector<Recipe*, std::allocator<Recipe*> >*' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: At global scope:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:17: error: expected ')' before 'name'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:33: error: request for member 'size' in '((Menu*)this)->Menu::recipes_', which is of non-class type 'std::vector<Recipe*, std::allocator<Recipe*> >*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:34: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'print'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:17: error: expected ')' before 'name'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:33: error: request for member 'size' in '((Menu*)this)->Menu::recipes_', which is of non-class type 'std::vector<Recipe*, std::allocator<Recipe*> >*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:34: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'print'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:33: error: request for member 'size' in '((Menu*)this)->Menu::recipes_', which is of non-class type 'std::vector<Recipe*, std::allocator<Recipe*> >*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:34: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'print'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'std::string Menu::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:34: error: base operand of '->' has non-pointer type 'std::vector<Recipe*, std::allocator<Recipe*> >'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_IngredientsActivity_listIngredients(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:105: error: redefinition of '_jstring* Java_com_cs474_IngredientsActivity_listIngredients(JNIEnv*, _jobject*)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:33: error: '_jstring* Java_com_cs474_IngredientsActivity_listIngredients(JNIEnv*, _jobject*)' previously defined here
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o: In function `Java_com_cs474_RecipesActivity_listRecipes':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:108: undefined reference to `Menu::listRecipes()'
+collect2: ld returned 1 exit status
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/librmsdk.so] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'const char* Menu::listRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:56: error: 'class Recipe' has no member named 'getName'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Recipe.o: In function `Ingredient::getName()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Recipe.cpp:31: multiple definition of `Ingredient::getName()'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o:/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:101: first defined here
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o: In function `Menu::listRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:56: undefined reference to `Recipe::getName()'
+collect2: ld returned 1 exit status
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/librmsdk.so] Error 1
+Compile++ thumb  : rmsdk <= Recipe.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'const char* Menu::listRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:56: error: 'class Recipe' has no member named 'getName'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: At global scope:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:65: error: no 'void Menu::addRecipe(const char*, const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'const char* Menu::listRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:56: error: 'class Recipe' has no member named 'getName'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: At global scope:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:65: error: no 'void Menu::addRecipe(const char*, const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'const char* Menu::listRecipes()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:56: error: 'class Recipe' has no member named 'getName'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: At global scope:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:65: error: no 'void Menu::addRecipe(const char*, const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:65: error: no 'void Menu::addRecipe(const char*, const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:8:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:28: error: expected ';' before '}' token
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:28: error: expected ';' before '}' token
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:65: error: no 'void Menu::addRecipe(const char*, const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Recipe.cpp: In member function 'virtual const char* Recipe::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Recipe.cpp:24: error: 'directions_' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Recipe.o] Error 1
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewIngredient_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:113: error: declaration of C function 'void Java_com_cs474_NewIngredient_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*)' conflicts with
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:15: error: previous declaration 'void Java_com_cs474_NewIngredient_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*, jint, jboolean)' here
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewIngredient_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:124: error: 'pantry' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewRecipe_addRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:124: error: 'pantry' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewRecipe_addRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:124: warning: cannot pass objects of non-POD type 'struct std::string' through '...'; call will abort at runtime
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewRecipe_addRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:124: warning: cannot pass objects of non-POD type 'struct std::string' through '...'; call will abort at runtime
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:33: error: 'recipes_' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
