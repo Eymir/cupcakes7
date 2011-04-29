@@ -19,15 +19,18 @@ import android.widget.AdapterView.OnItemClickListener;
 public class ARecipe extends Activity {
     String currentIngredient = null;
     private static final int GET_INGREDIENT = 1;
+    private static final int NEW_INGREDIENT = 2;
+
     //private ArrayAdapter<String> adp;
     private ListView ingredientList;
     private int selectedListPosition = -1;
+    public static String[] ingredients;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    String aRecipe = getIntent().getStringExtra("A_RECIPE");
+	    final String aRecipe = getIntent().getStringExtra("A_RECIPE");
 	    setContentView(R.layout.a_recipe);
 		final Button newButton = (Button) findViewById(R.id.a_recipe_new_ingredient_button);
 		final Button editButton = (Button) findViewById(R.id.a_recipe_edit_button);
@@ -37,7 +40,7 @@ public class ARecipe extends Activity {
 		// By using setAdpater method in listview we an add string array in list.
 		//adp = new ArrayAdapter<String>(this,R.layout.simple_list_item, MYINGREDIENTS);
 		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
-				R.layout.simple_list_item, MYINGREDIENTS));
+				R.layout.simple_list_item, ingredientList(aRecipe)));
 		deleteButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) 
@@ -48,7 +51,7 @@ public class ARecipe extends Activity {
 				}
 				else
 				{
-					String str = MYINGREDIENTS[selectedListPosition];
+					/*String str = MYINGREDIENTS[selectedListPosition];
 					MYINGREDIENTS[selectedListPosition] = MYINGREDIENTS[MYINGREDIENTS.length - 1];
 	                String[] temp = new String[MYINGREDIENTS.length - 1];
 	                for(int i = 0; i< MYINGREDIENTS.length - 1; i++)
@@ -58,7 +61,7 @@ public class ARecipe extends Activity {
 	                MYINGREDIENTS = temp;
 	                Toast.makeText(getApplicationContext(),"Deleted " + str, Toast.LENGTH_LONG).show();
 	        		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(),
-	        				R.layout.simple_list_item, MYINGREDIENTS));
+	        				R.layout.simple_list_item, MYINGREDIENTS));*/
 
 				}
 				//finish();
@@ -93,9 +96,10 @@ public class ARecipe extends Activity {
 	    });
 		newButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Intent i = new Intent(ARecipe.this,IngredientsActivity.class);
+				Intent i = new Intent(ARecipe.this,NewIngredient.class);
 	        	i.putExtra("MY_CALLER", "ARecipe");
-	        	startActivityForResult(i, GET_INGREDIENT);
+	        	i.putExtra("RECIPE_NAME", aRecipe);
+	        	startActivityForResult(i, NEW_INGREDIENT);
 	        	//startActivity(i);
 			}	    	
 	    });
@@ -106,26 +110,48 @@ public class ARecipe extends Activity {
 
         if (resultCode == RESULT_OK) {
             if (requestCode == GET_INGREDIENT) {
-                Bundle b = data.getExtras();
+                //Bundle b = data.getExtras();
                 //String str = "";
-                String[] temp = new String[MYINGREDIENTS.length + 1];
-                for(int i = 0; i< MYINGREDIENTS.length; i++)
-                {
-                	/*str += */temp[i] = MYINGREDIENTS[i];
+                //String[] temp = new String[MYINGREDIENTS.length + 1];
+               // for(int i = 0; i< MYINGREDIENTS.length; i++)
+                //{
+                	/*str += *///temp[i] = MYINGREDIENTS[i];
                 	//str+= " ";
-                }
-                /*str += */temp[MYINGREDIENTS.length] = b.getString("SEL_INGREDIENT");
-                MYINGREDIENTS = temp;
+               // }
+                /*str += *///temp[MYINGREDIENTS.length] = b.getString("SEL_INGREDIENT");
+                //MYINGREDIENTS = temp;
             	//Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
-        		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(),
-        				R.layout.simple_list_item, MYINGREDIENTS));
+        		//ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(),
+        		//		R.layout.simple_list_item, MYINGREDIENTS));
 
             	//ingredientList.get
             }
+            else if (requestCode == NEW_INGREDIENT) {
+            	
+            }
         }
 	}
-	private static String[] MYINGREDIENTS = new String[] {
+	
+	public String[] ingredientList(String name)
+    {
+    	String toParse = listIngredients(name);
+    	ingredients = toParse.split("\n");
+    	/*String tempIngredients[] = new String[ingredients.length + 1];
+    	for(int i = 0; i<ingredients.length; i++)
+    	{
+    		tempIngredients[i] = ingredients[i];
+    	}
+    	tempIngredients[ingredients.length] = "Create new...";
+    	return tempIngredients;*/
+    	return ingredients;
+    }
+    
+    private native String listIngredients(String name);
+    static {
+        System.loadLibrary("rmsdk");
+    }
+	/*private static String[] MYINGREDIENTS = new String[] {
 	    "Flour", "Sugar", "Water"
-	  };
+	  };*/
 
 }

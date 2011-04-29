@@ -14,6 +14,8 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class RecipesActivity extends ListActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
+    public static final int NEW_RECIPE = 1;
+
     public static String[] recipes;
 
 	/** Called when the activity is first created. */
@@ -31,10 +33,19 @@ public class RecipesActivity extends ListActivity {
 	    	 lv.setOnItemClickListener(new OnItemClickListener() {
 		            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 		            {
-		            	//When clicked, grab the text and send it to the recipe object
-			        	Intent i = new Intent(RecipesActivity.this, ARecipe.class);
-			        	i.putExtra("A_RECIPE", ((TextView) view).getText());
-			        	startActivity(i);
+		            	String str = (String) ((TextView) view).getText();
+		            	
+		            	if(str.equals("Create new..."))
+		            	{
+		  	          	  Intent i = new Intent(RecipesActivity.this, NewRecipe.class);
+		  	          	  startActivityForResult(i, NEW_RECIPE);
+		            	}
+		            	else
+		            	{	//When clicked, grab the text and send it to the recipe object
+				        	Intent i = new Intent(RecipesActivity.this, ARecipe.class);
+				        	i.putExtra("A_RECIPE", ((TextView) view).getText());
+				        	startActivity(i);
+		            	}
 		            }
 	    	 });
 	    }
@@ -43,13 +54,38 @@ public class RecipesActivity extends ListActivity {
 	        lv.setOnItemClickListener(new OnItemClickListener() {
 	            public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 	            {
-	            	SharedPreferences.Editor editor = appData.edit();
-	            	editor.putString("SEL_RECIPE", (String) ((TextView) view).getText());
-	            	editor.commit();
-	            	finish();
+	            	String str = (String) ((TextView) view).getText();
+	            	
+	            	if(str.equals("Create new..."))
+	            	{
+	  	          	  Intent i = new Intent(RecipesActivity.this, NewRecipe.class);
+	  	          	  startActivityForResult(i, NEW_RECIPE);
+	            	}
+	            	else
+	            	{
+		            	SharedPreferences.Editor editor = appData.edit();
+		            	editor.putString("SEL_RECIPE", (String) ((TextView) view).getText());
+		            	editor.commit();
+		            	finish();
+	            	}
 	            }
 	        });
 	    }
+	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            switch (requestCode)
+            {
+            case NEW_RECIPE:
+                //String str = "";
+            	//Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
+                setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, recipeList()));
+                break;
+            }
+        }
 	}
 	
 	public String[] recipeList()

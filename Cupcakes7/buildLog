@@ -612,3 +612,61 @@ Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:72: error: no 'Recipe* Menu::getRecipe(const char*)' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_ARecipe_listIngredients(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:134: error: 'class Menu' has no member named 'getIngredient'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:135: error: 'ingr' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:137: error: 'pantry' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:139: error: 'pantry' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_ARecipe_listIngredients(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:133: error: cannot convert 'const char*' to '_jstring*' in initialization
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:136: error: 'ingr' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_ARecipe_listIngredients(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:137: error: 'ingr' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:141: error: redeclaration of '_jstring* js'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:134: error: '_jstring* js' previously declared here
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_ARecipe_listIngredients(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:137: error: no match for 'operator!=' in '* recipe != 0'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'Recipe* Menu::getRecipe(const char*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:75: error: 'class Menu' has no member named 'size'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:77: error: no match for 'operator[]' in '* Menu::recipes[i]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:79: error: no match for 'operator[]' in '* Menu::recipes[i]'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_NewIngredient_addToRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*, _jstring*, jint, jboolean)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:160: error: 'pantry' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:161: error: 'pantry' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so

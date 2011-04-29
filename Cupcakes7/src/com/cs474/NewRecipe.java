@@ -1,10 +1,12 @@
 package com.cs474;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class NewRecipe extends Activity {
@@ -20,7 +22,10 @@ public class NewRecipe extends Activity {
 
 	    createButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+            	addRecipe(recipeName.getText().toString(), 
+                		((RadioButton)findViewById(recipeType.getCheckedRadioButtonId())).getText().toString());
+                setResult(RESULT_OK, new Intent());
+                finish();
             }
         });
 	}

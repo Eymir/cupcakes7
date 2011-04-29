@@ -125,4 +125,43 @@ extern "C"
 
 		//env->ReleaseStringUTFChars(logThis, szLogThis);
 	}
+
+	jstring Java_com_cs474_ARecipe_listIngredients(JNIEnv * env, jobject obj, jstring name)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * str = "";
+		jstring js;
+		const char * cname = env->GetStringUTFChars(name, &isCopy);
+		Recipe *recipe = recipes->getRecipe(cname);
+		if(recipe != NULL)
+		{
+			str = recipe->listIngredients();
+			return env->NewStringUTF(str);
+		}
+		return NULL;
+	}
+
+	void Java_com_cs474_NewIngredient_addToRecipe(JNIEnv * env, jobject obj, jstring rcpe, jstring ingr,
+			jstring type, jint amt, jboolean isSmall)
+	{
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		const char * ctype = env->GetStringUTFChars(type, &isCopy);
+		Menu *recipes = Menu::getRecipes();
+		Recipe *recipe = recipes->getRecipe(crcpe);
+
+	//	__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", pantry->getName_());
+		//const char* cstr = pantry->print();
+		if(recipe != NULL)
+		{
+			recipe->addIngredient(cingr,ctype,0);
+			if (isSmall) recipe->getIngredient(cingr)->editSmallAmount(amt);
+			else recipe->getIngredient(cingr)->editBigAmount(amt);
+		}
+		__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", recipe->print());
+
+		//env->ReleaseStringUTFChars(logThis, szLogThis);
+	}
 }
