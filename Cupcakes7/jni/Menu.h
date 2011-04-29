@@ -22,6 +22,10 @@ public:
     const char* print();
     static Menu *recipes;
     static Menu* getRecipes();
+    static Menu *smenu;
+    static Menu* getSMenu();
+    void smenuSet();
+    void copyOverRecipe(int i);
     Recipe* getRecipe(const char* name);
     void deleteRecipe(const char* name_e);
     const char* listRecipes();

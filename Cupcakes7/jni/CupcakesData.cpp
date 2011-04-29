@@ -228,6 +228,26 @@ extern "C"
 		return js;
 	}
 
+	jstring Java_com_cs474_MenuGenerated_listRecipes(JNIEnv * env, jobject obj)
+	{
+		Menu *myRecipes = Menu::getSMenu();
+		const char * str = myRecipes->listRecipes();
+		jstring js = env->NewStringUTF(str);
+		return js;
+	}
+
+	void Java_com_cs474_MenuList_setupSmenu(JNIEnv * env, jobject obj)
+	{
+		Menu *recipes = Menu::getRecipes();
+		recipes->smenuSet();
+
+	}
+
+	void Java_com_cs474_MenuList_addToSmenu(JNIEnv * env, jobject obj, jint a)
+		{
+		Menu *recipes = Menu::getRecipes();
+				recipes->copyOverRecipe(a);
+		}
 	void Java_com_cs474_NewRecipe_addRecipe(JNIEnv * env, jobject obj, jstring ingr, jstring type)
 	{
 		jboolean isCopy;

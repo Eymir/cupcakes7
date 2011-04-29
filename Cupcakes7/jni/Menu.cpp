@@ -8,6 +8,7 @@
 #include "Menu.h"
 
 Menu *Menu::recipes = NULL;
+Menu *Menu::smenu = NULL;
 
 Menu::Menu() {
 	recipes_ = new vector<Recipe*>;
@@ -94,3 +95,30 @@ const char* Menu::print() {
  	}
  	return NULL;//(*ingredientSet_)[0];
  }
+
+
+ Menu* Menu::getSMenu()
+ {
+	if(Menu::smenu == NULL)
+	{
+		Menu::smenu = new Menu("smenu");
+	}
+	return Menu::smenu;
+ }
+ void Menu::smenuSet()
+ {
+	 if(Menu::smenu == NULL)
+	 	{
+	 		Menu::smenu = new Menu("smenu");
+	 	}
+	 else{
+		 smenu->recipes_->clear();
+	 }
+ }
+
+ void Menu::copyOverRecipe(int i)
+ {
+	//Recipe* ptr = (*(recipes->recipes_))[i];
+	smenu->recipes_->push_back(   (*(recipes->recipes_))[i]    );
+ }
+
