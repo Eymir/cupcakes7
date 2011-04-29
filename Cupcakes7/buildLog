@@ -670,3 +670,6 @@ make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so

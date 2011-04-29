@@ -89,6 +89,7 @@ public class ARecipe extends Activity {
 				{
 					Intent i = new Intent(ARecipe.this, AnIngredientAct.class);
 		        	i.putExtra("MY_CALLER", "ARecipe");
+		        	i.putExtra("RECIPE_NAME", aRecipe);
 		        	i.putExtra("AN_INGREDIENT", currentIngredient);
 			        startActivity(i);
 				}

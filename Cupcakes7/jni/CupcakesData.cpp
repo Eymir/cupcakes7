@@ -61,6 +61,25 @@ extern "C"
 		return NULL;
 	}
 
+	jstring Java_com_cs474_AnIngredientAct_getTypeFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+			jstring ingr)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL)
+			{
+				return env->NewStringUTF(ingredient->getTypeUTF());
+			}
+		}
+		return NULL;
+	}
+
 	void Java_com_cs474_AnIngredientAct_addAmount(JNIEnv * env, jobject obj, jstring name, jint amt,
 			jboolean isSmall)
 	{
