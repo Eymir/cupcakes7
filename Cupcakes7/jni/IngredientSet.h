@@ -25,13 +25,15 @@ public:
 	IngredientSet(string name_e);
     virtual ~IngredientSet();
 	//vector<Ingredient>& getIngredientSet();
-    void addIngredient(string name_e, string bigName_e, string smallName_e, string type_e, int amount_e, int conversionFactor_e);
+    void addIngredient(const char* name_e, const char* type_e, int amount_e);
 	const char *getName_();
 	void setName(string name_e);
-    void deleteIngredient( Ingredient &ingrd);
+	const char* listIngredients();
+    void deleteIngredient(Ingredient &ingrd);
+    void deleteIngredient(const char* name_e);
     virtual const char *print();
     static IngredientSet *pantry;
-
+    static char moreTemp[10000];
     static IngredientSet* getPantry();
 };
 
