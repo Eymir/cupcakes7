@@ -45,6 +45,9 @@ public class MainMenu extends Activity {
         
         menuButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+				Intent i = new Intent(MainMenu.this, MenuList.class);
+	        	i.putExtra("MY_CALLER", "MainMenu");
+		        startActivity(i);
 				//String recipeIngr = appData.getString("SEL_INGREDIENT", "");
 				//((TextView) findViewById(R.id.mainHeader)).setText(recipeIngr);
 			}	    	
