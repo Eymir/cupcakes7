@@ -51,7 +51,7 @@ public class IngredientsActivity extends ListActivity {
 	  	          	  Intent i = new Intent(IngredientsActivity.this, NewIngredient.class);
 	  	          	  startActivityForResult(i, CREATE_NEW);
 	            	}
-	            	else
+	            	else if (!((TextView) view).getText().toString().equals(""))
 	            	{
 	            		Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
 	          	  		i.putExtra("MY_CALLER", "IngredientsActivity");
