@@ -220,6 +220,14 @@ extern "C"
 		return js;
 	}
 
+	jstring Java_com_cs474_MenuList_listRecipes(JNIEnv * env, jobject obj)
+	{
+		Menu *recipes = Menu::getRecipes();
+		const char * str = recipes->listRecipes();
+		jstring js = env->NewStringUTF(str);
+		return js;
+	}
+
 	void Java_com_cs474_NewRecipe_addRecipe(JNIEnv * env, jobject obj, jstring ingr, jstring type)
 	{
 		jboolean isCopy;
