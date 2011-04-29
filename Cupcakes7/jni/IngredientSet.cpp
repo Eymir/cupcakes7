@@ -38,8 +38,8 @@ Ingredient* IngredientSet::getIngredient(const char* name)
 		{
 			return (*ingredientSet_)[i];
 		}
-		return NULL;
 	}
+	return NULL;//(*ingredientSet_)[0];
 }
 
 const char* IngredientSet::listIngredients()
