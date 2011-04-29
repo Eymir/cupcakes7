@@ -23,6 +23,7 @@ public class ARecipe extends Activity {
 
     //private ArrayAdapter<String> adp;
     private ListView ingredientList;
+    private String aRecipe;
     private int selectedListPosition = -1;
     public static String[] ingredients;
 
@@ -30,7 +31,7 @@ public class ARecipe extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    final String aRecipe = getIntent().getStringExtra("A_RECIPE");
+	    aRecipe = getIntent().getStringExtra("A_RECIPE");
 	    setContentView(R.layout.a_recipe);
 		final Button newButton = (Button) findViewById(R.id.a_recipe_new_ingredient_button);
 		final Button editButton = (Button) findViewById(R.id.a_recipe_edit_button);
@@ -111,6 +112,8 @@ public class ARecipe extends Activity {
 
         if (resultCode == RESULT_OK) {
             if (requestCode == GET_INGREDIENT) {
+            	ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
+        				R.layout.simple_list_item, ingredientList(aRecipe)));
                 //Bundle b = data.getExtras();
                 //String str = "";
                 //String[] temp = new String[MYINGREDIENTS.length + 1];
@@ -128,7 +131,8 @@ public class ARecipe extends Activity {
             	//ingredientList.get
             }
             else if (requestCode == NEW_INGREDIENT) {
-            	
+            	ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
+        				R.layout.simple_list_item, ingredientList(aRecipe)));
             }
         }
 	}

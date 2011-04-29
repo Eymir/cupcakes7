@@ -673,3 +673,37 @@ Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_addAmountFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*, jint, jboolean)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:129: error: 'name' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:130: error: declaration of 'Ingredient* ingr' shadows a parameter
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_useAmountFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*, jint, jboolean)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:143: error: 'name' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:144: error: declaration of 'Ingredient* ingr' shadows a parameter
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_deleteIngredientFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:158: error: 'name' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:159: error: declaration of 'Ingredient* ingr' shadows a parameter
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_addAmountFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*, jint, jboolean)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:137: error: 'class _jstring' has no member named 'editSmallAmount'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:138: error: 'class _jstring' has no member named 'editBigAmount'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_useAmountFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*, jint, jboolean)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:157: error: 'class _jstring' has no member named 'editSmallAmount'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:158: error: 'class _jstring' has no member named 'editBigAmount'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_AnIngredientAct_deleteIngredientFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:176: error: 'cname' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'jint Java_com_cs474_AnIngredientAct_getAmountFromRecipe(JNIEnv*, _jobject*, _jstring*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:61: error: 'cname' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
