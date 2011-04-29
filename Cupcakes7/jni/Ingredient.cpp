@@ -12,6 +12,8 @@
 #include "Ingredient.h"
 using namespace std;
 
+char Ingredient::buffer[10000];
+
 Ingredient::Ingredient(){
 			name_="";
 			bigName_="";
@@ -107,7 +109,13 @@ Ingredient::~Ingredient() {
 		string Ingredient::getSmallName(){
 			return smallName_;
 		}
+		const char* Ingredient::getTypeUTF() {
+			//const char* temp_ = IngredientSet::moreTemp;
+			//moreTemp = temp_.c_str();
+			sprintf(buffer,"%s",getType().c_str());
+			return buffer;
 
+		}
 		string Ingredient::getType(){
 			return type_;
 		}

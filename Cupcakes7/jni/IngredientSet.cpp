@@ -11,7 +11,6 @@
 #include "IngredientSet.h"
 
 IngredientSet *IngredientSet::pantry = NULL;
-char IngredientSet::moreTemp[10000];
 
 IngredientSet::IngredientSet() {
 	name_ = "";
@@ -30,20 +29,35 @@ void IngredientSet::addIngredient(const char* name_e, const char* type_e, int am
 	ingredientSet_->push_back(new Ingredient(name_e, type_e, amount_e));
 }
 
-const char* IngredientSet::listIngredients() {
-	string temp_ = " ";
+Ingredient* IngredientSet::getIngredient(const char* name)
+{
+	string temp = name;
+	for (int i = 0; i < ingredientSet_->size(); i++)
+	{
+		if ((*ingredientSet_)[i]->getName().compare(name) == 0)
+		{
+			return (*ingredientSet_)[i];
+		}
+		return NULL;
+	}
+}
 
-		for (int i = 0; i < ingredientSet_->size(); i++) {
+const char* IngredientSet::listIngredients()
+{
+	string temp_ = "";
+	for (int i = 0; i < ingredientSet_->size(); i++)
+	{
 		temp_ = temp_ + (*ingredientSet_)[i]->getName() + "\n";
 		//temp_ = temp_ + "blah";
-		}
+	}
 
-		//moreTemp = temp_.c_str();
-		sprintf(moreTemp,"%s",temp_.c_str());
-		return moreTemp;
+	//moreTemp = temp_.c_str();
+	sprintf(Ingredient::buffer,"%s",temp_.c_str());
+	return Ingredient::buffer;
 }
+
 const char* IngredientSet::print() {
-	string temp_ = " ";
+	string temp_ = "";
 
 	for (int i = 0; i < ingredientSet_->size(); i++) {
 	temp_ = temp_ + (*ingredientSet_)[i]->print() + "\n";
@@ -51,8 +65,8 @@ const char* IngredientSet::print() {
 	}
 
 	//moreTemp = temp_.c_str();
-	sprintf(moreTemp,"%s",temp_.c_str());
-	return moreTemp;
+	sprintf(Ingredient::buffer,"%s",temp_.c_str());
+	return Ingredient::buffer;
 
 }
 void IngredientSet::deleteIngredient( Ingredient &ingrd){

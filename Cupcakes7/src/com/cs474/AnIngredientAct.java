@@ -7,18 +7,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class AnIngredientAct extends Activity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    String anIngredient = getIntent().getStringExtra("AN_INGREDIENT");
+	    final String anIngredient = getIntent().getStringExtra("AN_INGREDIENT");
 	    setContentView(R.layout.an_ingredient);
 		final Button deleteButton = (Button) findViewById(R.id.deleteButton);
+		final Button addButton = (Button) findViewById(R.id.addButton);
+		final Button useButton = (Button) findViewById(R.id.useButton);
+		final EditText modAmount = (EditText) findViewById(R.id.modifyAmount);
+	    final ToggleButton sizeMeasure = (ToggleButton) findViewById(R.id.an_ingredient_sizeMeasure);
+	    sizeMeasure.setText("SM");
+	    sizeMeasure.setTextOff("SM");
+	    sizeMeasure.setTextOn("LG");
+		((TextView) findViewById(R.id.unitText)).setText(" " + getUnits(getType(anIngredient)));
 		((TextView) findViewById(R.id.ingredientName)).setText(anIngredient);
+		((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+				+ " " + getUnits(getType(anIngredient)));
 		deleteButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
+		
 		//Get context of call to this page - we are either working with Recipe's ingredients
 		//or Pantry's ingredients, and must access the underlying data specific to the call
 		String caller = getIntent().getStringExtra("MY_CALLER");
@@ -34,12 +47,46 @@ public class AnIngredientAct extends Activity {
 	    {
 	    	
 	    }
+	    addButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				addAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
+				((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+						+ " " + getUnits(getType(anIngredient)));
+			}	    	
+	    });
+	    useButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				useAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
+				((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+						+ " " + getUnits(getType(anIngredient)));
+			}	    	
+	    });
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				finish();
+				
 			}	    	
 	    });
 	    
 	}
-
+	String getUnits(String type)
+	{
+		if(type.equals("Whole"))
+		{
+			
+			return "units";
+		}
+		else if(type.equals("Liquid") || type.equals("Powdered"))
+		{
+			return "teaspoons";
+		}
+		else
+			return "";
+	}
+	private native int getAmount(String name);
+	private native String getType(String name);
+	private native void addAmount(String name, int amt, boolean isSmall);
+	private native void useAmount(String name, int amt, boolean isSmall);
+	static {
+		System.loadLibrary("rmsdk");
+	}
 }

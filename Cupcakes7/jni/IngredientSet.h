@@ -28,12 +28,12 @@ public:
     void addIngredient(const char* name_e, const char* type_e, int amount_e);
 	const char *getName_();
 	void setName(string name_e);
+	Ingredient* getIngredient(const char* name);
 	const char* listIngredients();
     void deleteIngredient(Ingredient &ingrd);
     void deleteIngredient(const char* name_e);
     virtual const char *print();
     static IngredientSet *pantry;
-    static char moreTemp[10000];
     static IngredientSet* getPantry();
 };
 
