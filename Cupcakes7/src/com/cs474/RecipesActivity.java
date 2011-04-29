@@ -15,6 +15,8 @@ import android.widget.AdapterView.OnItemClickListener;
 public class RecipesActivity extends ListActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     public static final int NEW_RECIPE = 1;
+    public static final int SELECT_RECIPE = 2;
+
 
     public static String[] recipes;
 
@@ -44,7 +46,7 @@ public class RecipesActivity extends ListActivity {
 		            	{	//When clicked, grab the text and send it to the recipe object
 				        	Intent i = new Intent(RecipesActivity.this, ARecipe.class);
 				        	i.putExtra("A_RECIPE", ((TextView) view).getText());
-				        	startActivity(i);
+				        	startActivityForResult(i,SELECT_RECIPE);
 		            	}
 		            }
 	    	 });
@@ -80,6 +82,11 @@ public class RecipesActivity extends ListActivity {
             switch (requestCode)
             {
             case NEW_RECIPE:
+                //String str = "";
+            	//Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
+                setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, recipeList()));
+                break;
+            case SELECT_RECIPE:
                 //String str = "";
             	//Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
                 setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, recipeList()));

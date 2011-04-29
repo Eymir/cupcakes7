@@ -125,12 +125,17 @@ public class AnIngredientAct extends Activity {
 	                setResult(RESULT_OK, new Intent());
 					finish();
 			    }
-				if(caller.equals("IngredientsActivity"))
+				else if(caller.equals("IngredientsActivity"))
 			    {
 					deleteIngredient(anIngredient);
 	                setResult(RESULT_OK, new Intent());
 					finish();
 			    }
+				else
+				{
+		            Toast.makeText(getApplicationContext(),"What?", Toast.LENGTH_LONG).show();
+
+				}
 			}	    	
 	    });
 	    sizeMeasure.setOnClickListener(new OnClickListener(){
