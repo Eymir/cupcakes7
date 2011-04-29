@@ -5,7 +5,6 @@ xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="
 <ListView android:id="@+id/ListView01" android:layout_height="wrap_content"
 android:layout_width="fill_parent"></ListView>
 <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:baselineAligned="true">
-    <Button android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/backlb" android:text="Back" android:textColor="@color/list_text"></Button>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:layout_weight="1" android:id="@+id/grocerylb" android:text="Grocery List" android:textColor="@color/list_text"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/grocerylb" android:text="Create Menu"></Button>
 </LinearLayout>
 </LinearLayout>

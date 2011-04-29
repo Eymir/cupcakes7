@@ -733,3 +733,98 @@ Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:120: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'pushBack'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:120: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:120: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:120: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: 'class Menu' has no member named 'pushBack'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: 'class Menu' has no member named 'pushBack'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected ')' before ';' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'pushBack'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected ')' before ';' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: 'class std::vector<Recipe*, std::allocator<Recipe*> >' has no member named 'push_Back'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected ')' before ';' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected ')' before ';' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected unqualified-id before '(' token
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:122: error: no matching function for call to 'std::vector<Recipe*, std::allocator<Recipe*> >::push_back(Recipe&)'
+/usr/local/android/ndk/sources/cxx-stl/stlport/stlport/stl/_vector.h:376: note: candidates are: void std::vector<_Tp, _Alloc>::push_back(const _Tp&) [with _Tp = Recipe*, _Alloc = std::allocator<Recipe*>]
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'void Menu::copyOverRecipe(int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:121: error: expected unqualified-id before '(' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_setupSmenu(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:233: error: 'smenuSet' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_addToSmenu(JNIEnv*, _jobject*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:239: error: 'copyOverRecipe' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_setupSmenu(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:233: error: cannot call member function 'void Menu::smenuSet()' without object
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_addToSmenu(JNIEnv*, _jobject*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:239: error: cannot call member function 'void Menu::copyOverRecipe(int)' without object
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_setupSmenu(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:233: error: cannot call member function 'void Menu::smenuSet()' without object
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MenuList_addToSmenu(JNIEnv*, _jobject*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:239: error: cannot call member function 'void Menu::copyOverRecipe(int)' without object
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
