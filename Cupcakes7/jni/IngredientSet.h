@@ -27,6 +27,7 @@ public:
 	//vector<Ingredient>& getIngredientSet();
     void addIngredient(const char* name_e, const char* type_e, int amount_e);
 	const char *getName_();
+	string getName();
 	void setName(string name_e);
 	Ingredient* getIngredient(const char* name);
 	const char* listIngredients();

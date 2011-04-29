@@ -33,7 +33,7 @@ public:
 	void editBigName(string bigName_e);
 	void editSmallName(string smallName_e);
 	void editType(string type_e);
-			string getName();
+	string getName();
 	string getBigName();
 	string getSmallName();
 	string getType();

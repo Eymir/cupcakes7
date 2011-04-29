@@ -14,12 +14,13 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class RecipesActivity extends ListActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
+    public static String[] recipes;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, RECIPES));
+	    setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, recipeList()));
 	    final SharedPreferences appData = getSharedPreferences(PREFS_NAME, 0);
 	    ListView lv = getListView();
         lv.setTextFilterEnabled(true);
@@ -50,10 +51,28 @@ public class RecipesActivity extends ListActivity {
 	        });
 	    }
 	}
+	
+	public String[] recipeList()
+    {
+    	String toParse = listRecipes();
+    	recipes = toParse.split("\n");
+    	String tempIngredients[] = new String[recipes.length + 1];
+    	for(int i = 0; i<recipes.length; i++)
+    	{
+    		tempIngredients[i] = recipes[i];
+    	}
+    	tempIngredients[recipes.length] = "Create new...";
+    	return tempIngredients;
+    }
+	
+	private native String listRecipes();
+    static {
+        System.loadLibrary("rmsdk");
+    }
 	// RECIPES is just a placeholder for the String[] that should be returned in
     // a C++ NDK function call (depending on context); the "Create new..." option will
 	// be added after the fact by this page
-	static final String[] RECIPES = new String[] {
+	/*static final String[] RECIPES = new String[] {
 	    "Tacos", "Hashbrowns", "Spaghetti", "Chocolate Chip Cookies", "Create new..."
-	  };
+	  };*/
 }

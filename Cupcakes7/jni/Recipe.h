@@ -13,18 +13,12 @@
 class Recipe: public IngredientSet {
 protected:
 	string type_;
-	string directions_;
-
 public:
 	Recipe();
-	Recipe(string type_e, string directions_e);
-	Recipe(string name_e, string type_e, string directions_e);
+	Recipe(string name_e, string type_e);
 	string getType();
-	string getDirections();
-	const char *print();
 	void setType(string type_e);
-	void setDirections(string directions_e);
-         virtual ~Recipe();
+    virtual ~Recipe();
 
 };
 

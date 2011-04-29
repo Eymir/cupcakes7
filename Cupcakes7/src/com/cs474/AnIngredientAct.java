@@ -50,15 +50,26 @@ public class AnIngredientAct extends Activity {
 	    addButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				addAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
-				((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
-						+ " " + getUnits(getType(anIngredient)));
+				if(!sizeMeasure.isChecked()){
+					((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+							+ " " + getUnits(getType(anIngredient)));}
+					else{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient)/getConversionFactor(getType(anIngredient)) 
+							+ " " + getUnits(getType(anIngredient)));}
+					
 			}	    	
 	    });
 	    useButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				useAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
-				((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
-						+ " " + getUnits(getType(anIngredient)));
+				
+				if(!sizeMeasure.isChecked()){
+					((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+							+ " " + getUnits(getType(anIngredient)));}
+					else{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient)/getConversionFactor(getType(anIngredient)) 
+							+ " " + getUnits(getType(anIngredient)));}
+					
 			}	    	
 	    });
 		deleteButton.setOnClickListener(new OnClickListener() {

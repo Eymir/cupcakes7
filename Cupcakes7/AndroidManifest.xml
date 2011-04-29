@@ -17,5 +17,6 @@
         <activity android:name="RecipesActivity"></activity>
         <activity android:name="ARecipe"></activity>
         <activity android:name="NewIngredient"></activity>
+        <activity android:name="NewRecipe"></activity>
     </application>
 </manifest>

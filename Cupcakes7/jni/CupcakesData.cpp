@@ -101,4 +101,28 @@ extern "C"
 			pantry->deleteIngredient(cname);
 		}
 	}
+
+	jstring Java_com_cs474_RecipesActivity_listRecipes(JNIEnv * env, jobject obj)
+	{
+		Menu *recipes = Menu::getRecipes();
+		const char * str = recipes->listRecipes();
+		jstring js = env->NewStringUTF(str);
+		return js;
+	}
+
+	void Java_com_cs474_NewRecipe_addRecipe(JNIEnv * env, jobject obj, jstring ingr, jstring type)
+	{
+		jboolean isCopy;
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		const char * ctype = env->GetStringUTFChars(type, &isCopy);
+		Menu *recipes = Menu::getRecipes();
+
+	//	__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", pantry->getName_());
+		//const char* cstr = pantry->print();
+		recipes->addRecipe(cingr,ctype);
+
+		__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", recipes->print());
+
+		//env->ReleaseStringUTFChars(logThis, szLogThis);
+	}
 }

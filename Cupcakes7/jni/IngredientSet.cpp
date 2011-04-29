@@ -93,6 +93,11 @@ void IngredientSet::deleteIngredient(const char* name_e){
 const char* IngredientSet::getName_() {
 	return name_.c_str();
 }
+
+string IngredientSet::getName() {
+	return name_;
+}
+
 void IngredientSet::setName(string name_e){
 	name_= name_e;
 }
