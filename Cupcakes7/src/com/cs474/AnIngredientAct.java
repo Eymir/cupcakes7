@@ -39,8 +39,8 @@ public class AnIngredientAct extends Activity {
 		    String aRecipe = getIntent().getStringExtra("RECIPE_NAME");
 	    	((TextView) findViewById(R.id.unitText)).setText(" " + getUnits(getTypeFromRecipe(aRecipe,
 	    			anIngredient)));
-			((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
-					+ " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+			((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmountFromRecipe(aRecipe,
+					anIngredient) + " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
 	    }
 	    else if(caller.equals("IngredientsActivity"))
 	    {
@@ -54,7 +54,23 @@ public class AnIngredientAct extends Activity {
 	    }
 	    addButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if(caller.equals("IngredientsActivity"))
+				if(caller.equals("ARecipe"))
+			    {
+				    String aRecipe = getIntent().getStringExtra("RECIPE_NAME");
+					addAmountFromRecipe(aRecipe, anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
+					if(!sizeMeasure.isChecked())
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText(" " + getUnits(getTypeFromRecipe(aRecipe,
+			    			anIngredient)));
+					}
+					else
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmountFromRecipe(aRecipe, 
+							anIngredient)/getConversionFactor(getTypeFromRecipe(aRecipe, anIngredient))
+							+ " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+					}
+			    }
+				else if(caller.equals("IngredientsActivity"))
 			    {
 					addAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
 			    
@@ -70,7 +86,23 @@ public class AnIngredientAct extends Activity {
 	    });
 	    useButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if(caller.equals("IngredientsActivity"))
+				if(caller.equals("ARecipe"))
+			    {
+				    String aRecipe = getIntent().getStringExtra("RECIPE_NAME");
+					useAmountFromRecipe(aRecipe, anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
+					if(!sizeMeasure.isChecked())
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText(" " + getUnits(getTypeFromRecipe(aRecipe,
+			    			anIngredient)));
+					}
+					else
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmountFromRecipe(aRecipe, 
+							anIngredient)/getConversionFactor(getTypeFromRecipe(aRecipe, anIngredient))
+							+ " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+					}
+			    }
+				else if(caller.equals("IngredientsActivity"))
 			    {
 					useAmount(anIngredient, Integer.parseInt(modAmount.getText().toString()), !sizeMeasure.isChecked());
 					
@@ -86,6 +118,13 @@ public class AnIngredientAct extends Activity {
 	    });
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+				if(caller.equals("ARecipe"))
+			    {
+				    String aRecipe = getIntent().getStringExtra("RECIPE_NAME");
+				    deleteIngredientFromRecipe(aRecipe, anIngredient);
+	                setResult(RESULT_OK, new Intent());
+					finish();
+			    }
 				if(caller.equals("IngredientsActivity"))
 			    {
 					deleteIngredient(anIngredient);
@@ -96,7 +135,24 @@ public class AnIngredientAct extends Activity {
 	    });
 	    sizeMeasure.setOnClickListener(new OnClickListener(){
 			public void onClick(View v) {
-				if(caller.equals("IngredientsActivity"))
+				if(caller.equals("ARecipe"))
+			    {
+				    String aRecipe = getIntent().getStringExtra("RECIPE_NAME");
+				    ((TextView) findViewById(R.id.unitText)).setText(" " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+				    
+					if(!sizeMeasure.isChecked())
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmountFromRecipe(aRecipe, anIngredient) 
+							+ " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+					}
+					else
+					{
+						((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + 
+							getAmountFromRecipe(aRecipe, anIngredient)/getConversionFactor(getTypeFromRecipe(aRecipe, anIngredient)) 
+							+ " " + getUnits(getTypeFromRecipe(aRecipe, anIngredient)));
+					}
+			    }
+				else if(caller.equals("IngredientsActivity"))
 			    {
 					((TextView) findViewById(R.id.unitText)).setText(" " + getUnits(getType(anIngredient)));
 			    
@@ -153,11 +209,15 @@ public class AnIngredientAct extends Activity {
 		return 1;
 	}
 	private native int getAmount(String name);
+	private native int getAmountFromRecipe(String recipeName, String ingredientName);
 	private native String getType(String name);
 	private native String getTypeFromRecipe(String recipeName, String ingredientName);
 	private native void addAmount(String name, int amt, boolean isSmall);
 	private native void useAmount(String name, int amt, boolean isSmall);
 	private native void deleteIngredient(String name);
+	private native void addAmountFromRecipe(String recipeName, String ingredientName, int amt, boolean isSmall);
+	private native void useAmountFromRecipe(String recipeName, String ingredientName, int amt, boolean isSmall);
+	private native void deleteIngredientFromRecipe(String recipeName, String ingredientName);
 	static {
 		System.loadLibrary("rmsdk");
 	}

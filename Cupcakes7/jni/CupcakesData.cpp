@@ -48,6 +48,22 @@ extern "C"
 		return -1;
 	}
 
+	jint Java_com_cs474_AnIngredientAct_getAmountFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+			jstring ingr)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL) return ingredient->getAmount();
+		}
+		return -2;
+	}
+
 	jstring Java_com_cs474_AnIngredientAct_getType(JNIEnv * env, jobject obj, jstring name)
 	{
 		IngredientSet *pantry = IngredientSet::getPantry();
@@ -118,6 +134,63 @@ extern "C"
 		if(ingr != NULL)
 		{
 			pantry->deleteIngredient(cname);
+		}
+	}
+
+	void Java_com_cs474_AnIngredientAct_addAmountFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+			jstring ingr, jint amt, jboolean isSmall)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL)
+			{
+				if(isSmall) ingredient->editSmallAmount(amt);
+				else ingredient->editBigAmount(amt);
+			}
+		}
+	}
+
+	void Java_com_cs474_AnIngredientAct_useAmountFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+			jstring ingr, jint amt, jboolean isSmall)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		amt = amt * -1;
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL)
+			{
+				if(isSmall) ingredient->editSmallAmount(amt);
+				else ingredient->editBigAmount(amt);
+			}
+		}
+	}
+
+	void Java_com_cs474_AnIngredientAct_deleteIngredientFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+			jstring ingr)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL)
+			{
+				recipe->deleteIngredient(cingr);
+			}
 		}
 	}
 
