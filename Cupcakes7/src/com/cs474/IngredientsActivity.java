@@ -22,7 +22,8 @@ public class IngredientsActivity extends ListActivity {
     /** Called when the activity is first created. */
     public static final String PREFS_NAME = "MyPrefsFile";
     public static final int CREATE_NEW = 1;
-    public static final int CREATE_NEW_RETURN = 1;
+    public static final int CREATE_NEW_RETURN = 2;
+    public static final int EDIT_VIEW = 3;
     public static String[] ingredients;
 
     @Override
@@ -43,7 +44,7 @@ public class IngredientsActivity extends ListActivity {
 	            {
 	              // When clicked, grab the text and send it to the Cupboard/Pantry/Fridge
 	            	String str = (String) ((TextView) view).getText();
-	            	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+	            	//Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
 
 	            	if(str.equals("Create new..."))
 	            	{
@@ -55,7 +56,7 @@ public class IngredientsActivity extends ListActivity {
 	            		Intent i = new Intent(IngredientsActivity.this, AnIngredientAct.class);
 	          	  		i.putExtra("MY_CALLER", "IngredientsActivity");
 	          	  		i.putExtra("AN_INGREDIENT", ((TextView) view).getText());
-	          	  		startActivity(i);
+	          	  		startActivityForResult(i, EDIT_VIEW);
 	            	}
 	            }
 	          });
@@ -67,7 +68,7 @@ public class IngredientsActivity extends ListActivity {
 	            {
 	              // When clicked, grab the text and return it to the calling context
 	            	String str = (String) ((TextView) view).getText();
-	            	Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
+	            	//Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
 
 	          	  //SharedPreferences.Editor editor = appData.edit();
 	          	  //editor.putString("SEL_INGREDIENT", (String) ((TextView) view).getText());
@@ -102,11 +103,16 @@ public class IngredientsActivity extends ListActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK) {
-            if (requestCode == CREATE_NEW) {
+            switch (requestCode)
+            {
+            case CREATE_NEW:
                 //String str = "";
-            	Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
+            	//Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
                 setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, ingredientList()));
-
+                break;
+            case EDIT_VIEW:
+                setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, ingredientList()));
+                break;
             	//ingredientList.get
             }
         }

@@ -89,4 +89,16 @@ extern "C"
 			else ingr->editBigAmount(amt);
 		}
 	}
+
+	void Java_com_cs474_AnIngredientAct_deleteIngredient(JNIEnv * env, jobject obj, jstring name)
+	{
+		IngredientSet *pantry = IngredientSet::getPantry();
+		jboolean isCopy;
+		const char * cname = env->GetStringUTFChars(name, &isCopy);
+		Ingredient *ingr = pantry->getIngredient(cname);
+		if(ingr != NULL)
+		{
+			pantry->deleteIngredient(cname);
+		}
+	}
 }

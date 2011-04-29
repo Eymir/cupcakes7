@@ -63,29 +63,70 @@ public class AnIngredientAct extends Activity {
 	    });
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				
+				deleteIngredient(anIngredient);
+                setResult(RESULT_OK, new Intent());
+				finish();
 			}	    	
 	    });
-	    
+	    sizeMeasure.setOnClickListener(new OnClickListener(){
+			public void onClick(View v) {
+				((TextView) findViewById(R.id.unitText)).setText(" " + getUnits(getType(anIngredient)));
+				if(!sizeMeasure.isChecked()){
+				((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient) 
+						+ " " + getUnits(getType(anIngredient)));}
+				else{
+					((TextView) findViewById(R.id.an_ingredient_amount)).setText("" + getAmount(anIngredient)/getConversionFactor(getType(anIngredient)) 
+						+ " " + getUnits(getType(anIngredient)));}
+				
+			}
+	    	
+	    });
 	}
-	String getUnits(String type)
+	
+	private String getUnits(String type)
 	{
+	    ToggleButton sizeMeasure = (ToggleButton) findViewById(R.id.an_ingredient_sizeMeasure);
+
 		if(type.equals("Whole"))
 		{
-			
-			return "units";
+			if(!sizeMeasure.isChecked()) return "units";
+			return "lbs";
 		}
-		else if(type.equals("Liquid") || type.equals("Powdered"))
+		else if(type.equals("Liquid"))
 		{
-			return "teaspoons";
+			if(!sizeMeasure.isChecked()) return "teaspoons";
+			return "fluid oz";
+		}
+		else if(type.equals("Powdered"))
+		{
+			if(!sizeMeasure.isChecked()) return "teaspoons";
+			return "lbs";
 		}
 		else
 			return "";
+	}
+	private int getConversionFactor(String type)
+	{
+	    
+		if(type.equals("Whole"))
+		{
+			return 4;
+		}
+		else if(type.equals("Liquid"))
+		{
+			return 16;
+		}
+		else if(type.equals("Powdered"))
+		{
+			return 96;
+		}
+		return 1;
 	}
 	private native int getAmount(String name);
 	private native String getType(String name);
 	private native void addAmount(String name, int amt, boolean isSmall);
 	private native void useAmount(String name, int amt, boolean isSmall);
+	private native void deleteIngredient(String name);
 	static {
 		System.loadLibrary("rmsdk");
 	}
