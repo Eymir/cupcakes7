@@ -43,6 +43,30 @@ Ingredient::~Ingredient() {
 			conversionFactor_=conversionFactor_e;
 
 		}
+		Ingredient::Ingredient(const char* name, const char* type, int amount)
+		{
+			name_= name;
+			type_=type;
+			amount_=amount;
+			if (type_.compare("Liquid") == 0)
+			{
+				smallName_ = "teaspoons";
+				bigName_ = "fluid oz";
+				conversionFactor_ = 16;
+			}
+			else if (type_.compare("Whole") == 0)
+			{
+				smallName_ = "units";
+				bigName_ = "lbs";
+				conversionFactor_ = 4;
+			}
+			else if (type_.compare("Powdered") == 0)
+			{
+				smallName_ = "teaspoons";
+				bigName_ = "lbs";
+				conversionFactor_ = 96;
+			}
+		}
 
 		void Ingredient::changeAmount(int amount_e){
 			amount_=amount_e;
@@ -93,11 +117,16 @@ Ingredient::~Ingredient() {
 		int Ingredient::getConversionFactor(){
 			return conversionFactor_;
 		}
-		string Ingredient::print(){
+		string Ingredient::print()
+		{
 			string temp_;
-
-
-				temp_ = ("Name: "+ name_+ " " +  " " + smallName_ + " Type: " + type_ );
+			string moreTemp="";
+			char str[12];
+			sprintf(str, "%d", amount_);
+			//str[11] = "/0";
+			//temp_ = ("Name: "+ name_+ " ");
+			moreTemp.append(str);
+			temp_ = ("Name: "+ name_+ " " + moreTemp + " " + smallName_ + " Type: " + type_ );
  				return temp_;
 
 		}

@@ -1,0 +1,308 @@
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:34: error: uninitialized const 'moreTemp'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:40: error: assignment of read-only variable 'moreTemp'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:40: error: incompatible types in assignment of 'const char*' to 'const char [9999]'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:34: error: uninitialized const 'moreTemp'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:40: error: assignment of read-only variable 'moreTemp'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:40: error: incompatible types in assignment of 'const char*' to 'const char [9999]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:41: error: cannot convert 'const char (*)[9999]' to 'const char*' in return
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:40: error: incompatible types in assignment of 'const char*' to 'char [9999]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:41: error: cannot convert 'char (*)[9999]' to 'const char*' in return
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'virtual const char* IngredientSet::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:42: error: cannot convert 'char (*)[9999]' to 'const char*' in return
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o: In function `IngredientSet::print()':
+IngredientSet.cpp:(.text._ZN13IngredientSet5printEv+0x188): undefined reference to `IngredientSet::moreTemp'
+collect2: ld returned 1 exit status
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/librmsdk.so] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+SharedLibrary  : librmsdk.so
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o: In function `IngredientSet::print()':
+IngredientSet.cpp:(.text._ZN13IngredientSet5printEv+0x188): undefined reference to `IngredientSet::moreTemp'
+collect2: ld returned 1 exit status
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/librmsdk.so] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:46: error: prototype for 'Ingredient::Ingredient(char*, char*, int)' does not match any in class 'Ingredient'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:36: error: candidates are: Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:25: error:                 Ingredient::Ingredient(const Ingredient&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:15: error:                 Ingredient::Ingredient()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:28: error: prototype for 'void IngredientSet::addIngredient(char*, char*, int)' does not match any in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:28: error: candidate is: void IngredientSet::addIngredient(std::string, std::string, std::string, std::string, int, int)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_initialize(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:23: error: no matching function for call to 'IngredientSet::addIngredient(const char [8], const char [7], const char [7], const char [10], int, int)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:28: note: candidates are: void IngredientSet::addIngredient(char*, char*, int)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_initialize(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:23: warning: deprecated conversion from string constant to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:23: warning: deprecated conversion from string constant to 'char*'
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:23: warning: deprecated conversion from string constant to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:23: warning: deprecated conversion from string constant to 'char*'
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:18: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:19: error: no matching function for call to '_JNIEnv::GetStringUTFChars(char*&, jboolean*)'
+/usr/local/android/ndk/platforms/android-9/arch-arm/usr/include/jni.h:845: note: candidates are: const char* _JNIEnv::GetStringUTFChars(_jstring*, jboolean*)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:18: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:19: error: invalid conversion from 'const char*' to 'char*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_MainMenu_addIngredient(JNIEnv*, _jobject*, _jstring*, _jstring*, jint)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:24: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:24: error:   initializing argument 1 of 'void IngredientSet::addIngredient(char*, char*, int)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:24: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:24: error:   initializing argument 2 of 'void IngredientSet::addIngredient(char*, char*, int)'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:28: error: prototype for 'void IngredientSet::addIngredient(char*, char*, int)' does not match any in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:28: error: candidate is: void IngredientSet::addIngredient(const char*, const char*, int)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'void IngredientSet::addIngredient(const char*, const char*, int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:30: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:30: error:   initializing argument 1 of 'Ingredient::Ingredient(char*, char*, int)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:30: error: invalid conversion from 'const char*' to 'char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:30: error:   initializing argument 2 of 'Ingredient::Ingredient(char*, char*, int)'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In constructor 'Ingredient::Ingredient()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:15: error: uninitialized member 'Ingredient::bigName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:15: error: uninitialized member 'Ingredient::smallName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:15: error: uninitialized member 'Ingredient::type_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:17: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:17: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:18: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:18: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:19: error: assignment of read-only data-member 'Ingredient::type_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:19: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In copy constructor 'Ingredient::Ingredient(const Ingredient&)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:25: error: uninitialized member 'Ingredient::bigName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:25: error: uninitialized member 'Ingredient::smallName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:25: error: uninitialized member 'Ingredient::type_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:27: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:28: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:29: error: assignment of read-only data-member 'Ingredient::type_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In constructor 'Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:36: error: uninitialized member 'Ingredient::bigName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:36: error: uninitialized member 'Ingredient::smallName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:36: error: uninitialized member 'Ingredient::type_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:38: error: cannot convert 'std::string' to 'const char*' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:39: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:39: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:40: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:40: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:41: error: assignment of read-only data-member 'Ingredient::type_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:41: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In constructor 'Ingredient::Ingredient(char*, char*, int)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:46: error: uninitialized member 'Ingredient::bigName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:46: error: uninitialized member 'Ingredient::smallName_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:46: error: uninitialized member 'Ingredient::type_' with 'const' type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:49: error: assignment of read-only data-member 'Ingredient::type_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:49: error: invalid conversion from 'char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:51: error: request for member 'compare' in '((Ingredient*)this)->Ingredient::type_', which is of non-class type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:53: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:53: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:54: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:54: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:57: error: request for member 'compare' in '((Ingredient*)this)->Ingredient::type_', which is of non-class type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:59: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:59: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:60: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:60: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:63: error: request for member 'compare' in '((Ingredient*)this)->Ingredient::type_', which is of non-class type 'const char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:65: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:65: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:66: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:66: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'void Ingredient::editName(std::string)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:85: error: cannot convert 'std::string' to 'const char*' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'void Ingredient::editBigName(std::string)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:91: error: assignment of read-only data-member 'Ingredient::bigName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:91: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'void Ingredient::editSmallName(std::string)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:94: error: assignment of read-only data-member 'Ingredient::smallName_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:94: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'void Ingredient::editType(std::string)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:97: error: assignment of read-only data-member 'Ingredient::type_'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:97: error: cannot convert 'std::string' to 'const char' in assignment
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::getBigName()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:104: error: invalid conversion from 'char' to 'const char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:104: error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const typename std::priv::_String_base<_CharT, _Alloc>::allocator_type&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::getSmallName()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:108: error: invalid conversion from 'char' to 'const char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:108: error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const typename std::priv::_String_base<_CharT, _Alloc>::allocator_type&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::getType()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:112: error: invalid conversion from 'char' to 'const char*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:112: error:   initializing argument 1 of 'std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const typename std::priv::_String_base<_CharT, _Alloc>::allocator_type&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:124: error: invalid operands of types 'const char [7]' and 'const char*' to binary 'operator+'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:125: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:127: error: 'temp' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:128: error: expected ';' before ')' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp: In member function 'std::string Ingredient::print()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:125: error: invalid conversion from 'const char*' to 'char'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.cpp:127: error: 'temp' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Ingredient.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:11:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:32: error: extra qualification 'IngredientSet::' on member 'deleteIngredient'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile thumb  : rmsdk <= native.c
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:11:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:32: error: extra qualification 'IngredientSet::' on member 'deleteIngredient'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:55: error: prototype for 'void IngredientSet::deleteIngredient(std::string)' does not match any in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:32: error: candidates are: void IngredientSet::deleteIngredient(const char*)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:46: error:                 void IngredientSet::deleteIngredient(Ingredient&)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:55: error: prototype for 'void IngredientSet::deleteIngredient(std::string)' does not match any in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:32: error: candidates are: void IngredientSet::deleteIngredient(const char*)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:46: error:                 void IngredientSet::deleteIngredient(Ingredient&)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'void IngredientSet::deleteIngredient(const char*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:57: error: request for member 'compare' in 'name_e', which is of non-class type 'const char*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'void IngredientSet::deleteIngredient(const char*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:56: error: 'i' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:58: error: request for member 'compare' in 'name_e', which is of non-class type 'const char*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp: In member function 'void IngredientSet::deleteIngredient(const char*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:59: error: request for member 'compare' in 'name_e', which is of non-class type 'const char*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:33: error: no 'const char* IngredientSet::listIngredients()' member function declared in class 'IngredientSet'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+In file included from /Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:11:
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:32: error: expected ';' before 'void'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:33: error: no 'const char* IngredientSet::listIngredients()' member function declared in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.cpp:58: error: prototype for 'void IngredientSet::deleteIngredient(Ingredient&)' does not match any in class 'IngredientSet'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:33: error: candidate is: void IngredientSet::deleteIngredient(const char*)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/IngredientSet.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_NewIngredient_IngredientsActivity(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:32: error: 'unicodeChars' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:32: error: 'len' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_NewIngredient_IngredientsActivity(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:34: error: no matching function for call to '_JNIEnv::NewString(const char*&, size_t)'
+/usr/local/android/ndk/platforms/android-9/arch-arm/usr/include/jni.h:827: note: candidates are: _jstring* _JNIEnv::NewString(const jchar*, jsize)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_NewIngredient_IngredientsActivity(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:34: error: 'temp' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:35: error: no matching function for call to '_JNIEnv::NewString(const char*&, int&)'
+/usr/local/android/ndk/platforms/android-9/arch-arm/usr/include/jni.h:827: note: candidates are: _jstring* _JNIEnv::NewString(const jchar*, jsize)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_NewIngredient_IngredientsActivity(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:35: error: no matching function for call to '_JNIEnv::NewString(const char*&, int&)'
+/usr/local/android/ndk/platforms/android-9/arch-arm/usr/include/jni.h:827: note: candidates are: _jstring* _JNIEnv::NewString(const jchar*, jsize)
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so

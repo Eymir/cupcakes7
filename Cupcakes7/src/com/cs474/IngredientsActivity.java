@@ -1,5 +1,7 @@
 package com.cs474;
 
+import java.util.ArrayList;
+
 import com.cs474.R;
 
 import android.app.Activity;
@@ -21,12 +23,14 @@ public class IngredientsActivity extends ListActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     public static final int CREATE_NEW = 1;
     public static final int CREATE_NEW_RETURN = 1;
+    public static String[] ingredients;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.ingredients);
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, INGREDIENTS));
+
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, ingredientList()));
         final SharedPreferences appData = getSharedPreferences(PREFS_NAME, 0);
 
         ListView lv = getListView();
@@ -93,10 +97,41 @@ public class IngredientsActivity extends ListActivity {
 	    }
         
     }
+    
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == CREATE_NEW) {
+                //String str = "";
+            	Toast.makeText(getApplicationContext(),"yo",Toast.LENGTH_LONG).show();
+                setListAdapter(new ArrayAdapter<String>(this, R.layout.simple_list_item, ingredientList()));
+
+            	//ingredientList.get
+            }
+        }
+	}
+    public String[] ingredientList()
+    {
+    	String toParse = listIngredients();
+    	ingredients = toParse.split("\n");
+    	String tempIngredients[] = new String[ingredients.length + 1];
+    	for(int i = 0; i<ingredients.length; i++)
+    	{
+    		tempIngredients[i] = ingredients[i];
+    	}
+    	tempIngredients[ingredients.length] = "Create new...";
+    	return tempIngredients;
+    }
+    
+    private native String listIngredients();
+    static {
+        System.loadLibrary("rmsdk");
+    }
     // INGREDIENTS is just a placeholder for the String[] that should be returned in
     // a C++ NDK function call (depending on context); the "Create new..." option will
 	// be added after the fact by this page
-    static final String[] INGREDIENTS = new String[] {
+    /*static final String[] INGREDIENTS = new String[] {
 	    "Parsley", "Potatos", "Pasta", "Pita", "Pepperoni", "Create new..."
-	  };
+	  };*/
 }
