@@ -20,6 +20,8 @@ public class ARecipe extends Activity {
     String currentIngredient = null;
     private static final int GET_INGREDIENT = 1;
     private static final int NEW_INGREDIENT = 2;
+    private static final int EDIT_INGREDIENT = 3;
+
 
     //private ArrayAdapter<String> adp;
     private ListView ingredientList;
@@ -36,6 +38,8 @@ public class ARecipe extends Activity {
 		final Button newButton = (Button) findViewById(R.id.a_recipe_new_ingredient_button);
 		final Button editButton = (Button) findViewById(R.id.a_recipe_edit_button);
 		final Button deleteButton = (Button) findViewById(R.id.a_recipe_deleteButton);
+		final Button deleteRecipeButton = (Button) findViewById(R.id.a_recipe_delete_recipe);
+
 		((TextView) findViewById(R.id.a_recipe_Name)).setText(aRecipe);
 		ingredientList =(ListView)findViewById(R.id.a_recipe_ingredient_list);
 		// By using setAdpater method in listview we an add string array in list.
@@ -43,6 +47,15 @@ public class ARecipe extends Activity {
 		ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
 				R.layout.simple_list_item, ingredientList(aRecipe)));
 		deleteButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
+		deleteRecipeButton.getBackground().setColorFilter(0xFFDF3F1F, PorterDuff.Mode.MULTIPLY);
+		deleteRecipeButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) 
+			{
+				deleteRecipe(aRecipe);
+				setResult(RESULT_OK, new Intent());
+				finish();
+			}
+		});
 		deleteButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) 
 			{
@@ -52,6 +65,9 @@ public class ARecipe extends Activity {
 				}
 				else
 				{
+					deleteIngredientFromRecipe(aRecipe, currentIngredient);
+					ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
+	        				R.layout.simple_list_item, ingredientList(aRecipe)));
 					/*String str = MYINGREDIENTS[selectedListPosition];
 					MYINGREDIENTS[selectedListPosition] = MYINGREDIENTS[MYINGREDIENTS.length - 1];
 	                String[] temp = new String[MYINGREDIENTS.length - 1];
@@ -92,7 +108,7 @@ public class ARecipe extends Activity {
 		        	i.putExtra("MY_CALLER", "ARecipe");
 		        	i.putExtra("RECIPE_NAME", aRecipe);
 		        	i.putExtra("AN_INGREDIENT", currentIngredient);
-			        startActivity(i);
+			        startActivityForResult(i, EDIT_INGREDIENT);
 				}
 			}	    	
 	    });
@@ -134,6 +150,10 @@ public class ARecipe extends Activity {
             	ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
         				R.layout.simple_list_item, ingredientList(aRecipe)));
             }
+            else{
+            	ingredientList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), 
+        				R.layout.simple_list_item, ingredientList(aRecipe)));
+            }
         }
 	}
 	
@@ -152,7 +172,9 @@ public class ARecipe extends Activity {
     }
     
     private native String listIngredients(String name);
-    static {
+	private native void deleteIngredientFromRecipe(String recipeName, String ingredientName);
+	private native void deleteRecipe(String name);
+	static {
         System.loadLibrary("rmsdk");
     }
 	/*private static String[] MYINGREDIENTS = new String[] {

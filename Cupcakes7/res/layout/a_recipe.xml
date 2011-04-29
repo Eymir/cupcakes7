@@ -18,6 +18,7 @@ android:id="@+id/scrollView1" android:layout_height="fill_parent" android:layout
     </TableLayout>
     <RelativeLayout android:layout_weight="1" android:id="@+id/relativeLayout1" android:layout_height="0dip" android:layout_width="match_parent">
         <Button android:layout_centerHorizontal="true" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:layout_height="wrap_content" android:text="@string/a_recipe_deleteText" android:id="@+id/a_recipe_deleteButton"></Button>
+        <Button android:id="@+id/a_recipe_delete_recipe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete Recipe" android:layout_toRightOf="@+id/a_recipe_deleteButton" android:layout_alignTop="@+id/a_recipe_deleteButton" android:layout_alignBottom="@+id/a_recipe_deleteButton"></Button>
     </RelativeLayout>
     
 </LinearLayout>

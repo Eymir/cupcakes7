@@ -40,6 +40,17 @@ const char* Menu::print() {
 	return Ingredient::buffer;
 
 }
+ void Menu::deleteRecipe(const char* name_e){
+	string temp1 = name_e;
+	string temp;
+	for (int i = 0; i < recipes_->size(); i++) {
+		temp = (*recipes_)[i]->getName();
+		if(temp1.compare(temp)==0){
+			recipes_->erase(recipes_->begin()+i);
+		return;
+		}
+	}
+ }
 
  Menu* Menu::getRecipes()
  {

@@ -194,6 +194,24 @@ extern "C"
 		}
 	}
 
+	void Java_com_cs474_ARecipe_deleteIngredientFromRecipe(JNIEnv * env, jobject obj, jstring rcpe,
+				jstring ingr)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * crcpe = env->GetStringUTFChars(rcpe, &isCopy);
+		const char * cingr = env->GetStringUTFChars(ingr, &isCopy);
+		Recipe *recipe = recipes->getRecipe(crcpe);
+		if(recipe != NULL)
+		{
+			Ingredient *ingredient = recipe->getIngredient(cingr);
+			if(ingredient != NULL)
+			{
+				recipe->deleteIngredient(cingr);
+			}
+		}
+	}
+
 	jstring Java_com_cs474_RecipesActivity_listRecipes(JNIEnv * env, jobject obj)
 	{
 		Menu *recipes = Menu::getRecipes();
@@ -255,5 +273,17 @@ extern "C"
 		__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", recipe->print());
 
 		//env->ReleaseStringUTFChars(logThis, szLogThis);
+	}
+
+	void Java_com_cs474_ARecipe_deleteRecipe(JNIEnv * env, jobject obj, jstring name)
+	{
+		Menu *recipes = Menu::getRecipes();
+		jboolean isCopy;
+		const char * cname = env->GetStringUTFChars(name, &isCopy);
+		Recipe *rcpe = recipes->getRecipe(cname);
+		if(rcpe != NULL)
+		{
+			recipes->deleteRecipe(cname);
+		}
 	}
 }

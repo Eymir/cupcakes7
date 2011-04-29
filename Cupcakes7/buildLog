@@ -707,3 +707,25 @@ Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function 'void Java_com_cs474_ARecipe_deleteRecipe(JNIEnv*, _jobject*, _jstring*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:283: error: 'class Menu' has no member named 'getIngredient'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:286: error: 'class Menu' has no member named 'deleteIngredient'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
