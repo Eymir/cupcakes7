@@ -828,3 +828,173 @@ Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Compile++ thumb  : rmsdk <= CupcakesData.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:125: error: no 'char* Menu::calculateMethod()' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:125: error: no 'char* Menu::calculateMethod()' member function declared in class 'Menu'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:130: error: expected primary-expression before '->' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:130: error: 'class Recipe' has no member named 'ingredients_'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:130: error: 'class Recipe' has no member named 'ingredientSet__'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/IngredientSet.h:21: error: 'std::vector<Ingredient*, std::allocator<Ingredient*> >* IngredientSet::ingredientSet_' is protected
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:130: error: within this context
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= IngredientSet.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= Recipe.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:133: error: 'struct std::string' has no member named 'equals'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:133: error: 'ingredientSet_' was not declared in this scope
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:134: error: expected primary-expression before '}' token
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:134: error: expected ';' before '}' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:133: error: 'ingredientSet_' was not declared in this scope
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Ingredient.cpp
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no matching function for call to 'Ingredient::Ingredient(std::string)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:25: note: candidates are: Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:24: note:                 Ingredient::Ingredient(const char*, const char*, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:22: note:                 Ingredient::Ingredient(const Ingredient&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:21: note:                 Ingredient::Ingredient()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no matching function for call to 'Ingredient::Ingredient(Ingredient*&)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:25: note: candidates are: Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:24: note:                 Ingredient::Ingredient(const char*, const char*, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:22: note:                 Ingredient::Ingredient(const Ingredient&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:21: note:                 Ingredient::Ingredient()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no matching function for call to 'Ingredient::Ingredient(std::vector<Ingredient*, std::allocator<Ingredient*> >&)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:25: note: candidates are: Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:24: note:                 Ingredient::Ingredient(const char*, const char*, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:22: note:                 Ingredient::Ingredient(const Ingredient&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:21: note:                 Ingredient::Ingredient()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no match for 'operator*' in '**(temp->Recipe::<anonymous>.IngredientSet::ingredientSet_ + ((unsigned int)(((unsigned int)j) * 12u)))'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no match for 'operator*' in '**(temp->Recipe::<anonymous>.IngredientSet::ingredientSet_ + ((unsigned int)(((unsigned int)j) * 12u)))'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no matching function for call to 'Ingredient::Ingredient(Ingredient*&)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:25: note: candidates are: Ingredient::Ingredient(std::string, std::string, std::string, std::string, int, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:24: note:                 Ingredient::Ingredient(const char*, const char*, int)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:22: note:                 Ingredient::Ingredient(const Ingredient&)
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Ingredient.h:21: note:                 Ingredient::Ingredient()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:135: error: no matching function for call to 'std::vector<Ingredient*, std::allocator<Ingredient*> >::push_back(Ingredient)'
+/usr/local/android/ndk/sources/cxx-stl/stlport/stlport/stl/_vector.h:376: note: candidates are: void std::vector<_Tp, _Alloc>::push_back(const _Tp&) [with _Tp = Ingredient*, _Alloc = std::allocator<Ingredient*>]
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:133: error: base operand of '->' has non-pointer type 'Ingredient'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:138: error: request for member 'getAmount' in 'temp->Recipe::<anonymous>.IngredientSet::ingredientSet_->std::vector<_Tp, _Alloc>::operator[] [with _Tp = Ingredient*, _Alloc = std::allocator<Ingredient*>](((unsigned int)j))', which is of non-class type 'Ingredient*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:138: error: expected primary-expression before ')' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:138: error: request for member 'getAmount' in 'temp->Recipe::<anonymous>.IngredientSet::ingredientSet_->std::vector<_Tp, _Alloc>::operator[] [with _Tp = Ingredient*, _Alloc = std::allocator<Ingredient*>](((unsigned int)j))', which is of non-class type 'Ingredient*'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:138: error: expected primary-expression before ')' token
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:138: error: request for member 'getAmount' in 'temp->Recipe::<anonymous>.IngredientSet::ingredientSet_->std::vector<_Tp, _Alloc>::operator[] [with _Tp = Ingredient*, _Alloc = std::allocator<Ingredient*>](((unsigned int)j))', which is of non-class type 'Ingredient*'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:125: error: prototype for 'const char* Menu::calculateMethod()' does not match any in class 'Menu'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.h:31: error: candidate is: char* Menu::calculateMethod()
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In member function 'const char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:156: error: no match for 'operator+' in 'std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)" ")) + ((Ingredient*)tempIngs.std::vector<_Tp, _Alloc>::operator[] [with _Tp = Ingredient, _Alloc = std::allocator<Ingredient>](((unsigned int)i)))->Ingredient::getAmount()'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:125: error: cannot declare member function 'static const char* Menu::calculateMethod()' to have static linkage
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:239: error: redefinition of '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:231: error: '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)' previously defined here
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp: In function '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:239: error: redefinition of '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)'
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/CupcakesData.cpp:231: error: '_jstring* Java_com_cs474_MenuGenerated_listRecipes(JNIEnv*, _jobject*)' previously defined here
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/CupcakesData.o] Error 1
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= CupcakesData.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so

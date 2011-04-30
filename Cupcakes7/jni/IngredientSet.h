@@ -36,6 +36,7 @@ public:
     virtual const char *print();
     static IngredientSet *pantry;
     static IngredientSet* getPantry();
+	friend class Menu;
 };
 
 #endif /* INGREDIENTSET_H_ */

@@ -28,6 +28,7 @@ public:
     void copyOverRecipe(int i);
     Recipe* getRecipe(const char* name);
     void deleteRecipe(const char* name_e);
+    static const char* calculateMethod();
     const char* listRecipes();
     void addRecipe(const char* name_e, const char* type_e);
 

@@ -236,6 +236,15 @@ extern "C"
 		return js;
 	}
 
+	jstring Java_com_cs474_MenuGenerated_generateShoppingList(JNIEnv * env, jobject obj)
+	{
+		const char * str = Menu::calculateMethod();
+		__android_log_print(ANDROID_LOG_DEBUG, DEBUG_TAG, "NDK:LC: [%s]", str);
+
+		jstring js = env->NewStringUTF(str);
+		return js;
+	}
+
 	void Java_com_cs474_MenuList_setupSmenu(JNIEnv * env, jobject obj)
 	{
 		Menu *recipes = Menu::getRecipes();
