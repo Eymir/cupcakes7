@@ -122,3 +122,65 @@ const char* Menu::print() {
 	smenu->recipes_->push_back(   (*(recipes->recipes_))[i]    );
  }
 
+const char* Menu::calculateMethod(){
+	 IngredientSet* pantry__ = IngredientSet::getPantry();
+	 vector<Ingredient> tempIngs;
+	 string toBeReturned = "";
+	 bool flag=false;
+	 for (int i = 0; i < smenu->recipes_->size(); i++) {
+
+		 Recipe* temp = (*smenu->recipes_)[i];
+		 for (int j = 0; j < temp->ingredientSet_->size(); j++) {
+
+			 	 flag=false;
+			 	for (int k = 0; k < tempIngs.size(); k++)
+			 	{
+
+
+			 		if(tempIngs[k].getName().compare((*temp->ingredientSet_)[j]->getName()) != 0)
+			 		{
+
+
+			 		}
+			 		else{
+
+			 			 flag == true;
+			 			tempIngs[k].editAmount(0,( (*temp->ingredientSet_)[j]->getAmount() ));
+			 		}
+			 	}
+			 	if(flag == false){
+			 		tempIngs.push_back(Ingredient(*(*temp->ingredientSet_)[j]));
+			 	}
+
+
+		 }
+	 }
+	 for(int i = 0; i < tempIngs.size(); i++)
+	 {
+
+		 const char* str = tempIngs[i].getName().c_str();
+		 if(pantry__->getIngredient(str) != NULL)
+		 {
+
+			 tempIngs[i].editSmallAmount(-1 * pantry__->getIngredient(str)->getAmount());
+		 }
+	 }
+	 for(int i = 0; i < tempIngs.size(); i++)
+	 {
+
+		 if(tempIngs[i].getAmount() > 0)
+		 {
+			 string moreTemp="";
+			char str[12];
+			sprintf(str, "%d", tempIngs[i].getAmount());
+			//str[11] = "/0";
+			//temp_ = ("Name: "+ name_+ " ");
+			moreTemp.append(str);
+			 toBeReturned = toBeReturned + tempIngs[i].getName() + " " + moreTemp + " "
+					 + tempIngs[i].getSmallName() + "\n";
+		 }
+	}
+	sprintf(Ingredient::buffer,"%s",toBeReturned.c_str());
+	return Ingredient::buffer;
+ }
+
