@@ -173,10 +173,14 @@ const char* Menu::calculateMethod(){
 			 string moreTemp="";
 			char str[12];
 			sprintf(str, "%d", tempIngs[i].getAmount());
-			//str[11] = "/0";
-			//temp_ = ("Name: "+ name_+ " ");
 			moreTemp.append(str);
-			 toBeReturned = toBeReturned + tempIngs[i].getName() + " " + moreTemp + " "
+			string moreTemp2="";
+			char str2[12];
+			sprintf(str2, "%d", (tempIngs[i].getAmount()/tempIngs[i].getConversionFactor()));
+			moreTemp2.append(str2);
+
+			 toBeReturned = toBeReturned + tempIngs[i].getName() + " "+ moreTemp2 + " "
+					 + tempIngs[i].getBigName() +" or "+ moreTemp + " "
 					 + tempIngs[i].getSmallName() + "\n";
 		 }
 	}

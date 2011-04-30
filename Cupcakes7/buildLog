@@ -998,3 +998,30 @@ Install        : librmsdk.so => libs/armeabi/librmsdk.so
 Compile++ thumb  : rmsdk <= Menu.cpp
 SharedLibrary  : librmsdk.so
 Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In static member function 'static const char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:183: error: expected ';' before 'moreTemp2'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In static member function 'static const char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:182: error: expected ';' before 'moreTemp'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp: In static member function 'static const char* Menu::calculateMethod()':
+/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/jni/Menu.cpp:181: error: expected ';' before 'moreTemp'
+make: *** [/Users/Blackwood/Desktop/Spring2011/CS474/Cupcakes7/obj/local/armeabi/objs/rmsdk/Menu.o] Error 1
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
+Compile++ thumb  : rmsdk <= Menu.cpp
+SharedLibrary  : librmsdk.so
+Install        : librmsdk.so => libs/armeabi/librmsdk.so
