@@ -144,7 +144,7 @@ const char* Menu::calculateMethod(){
 			 		}
 			 		else{
 
-			 			 flag == true;
+			 			 flag = true;
 			 			tempIngs[k].editAmount(0,( (*temp->ingredientSet_)[j]->getAmount() ));
 			 		}
 			 	}
