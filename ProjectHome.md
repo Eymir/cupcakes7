@@ -1,0 +1,1 @@
+An Android application to manage consumable resources (ingredients & amounts) for use in the generation of menus and shopping lists.
